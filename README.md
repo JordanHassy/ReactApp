@@ -71,6 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Teams
 
-### 1
-Jordan and Travis
+1. Jordan and Travis
 
