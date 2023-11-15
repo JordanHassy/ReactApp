@@ -1,5 +1,3 @@
-// src/App.js
-
 import { useEffect, useState } from "react";
 import "./App.css";
 import TextBox from "./TextBox";
