@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import TextBox from "./TextBox";
 
+import worldData from './worldData.json';
+
 
 
 function App() {
@@ -37,30 +39,32 @@ function App() {
       this.travel = (city) => {
         if(city == "Athenian") {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription();
-          setTitle(() => "Athenian city");
-          setQuestion();
+          setDescription(() => worldData.worlds.Athenian.entryDescription);
+          setTitle(() => worldData.worlds.Athenian.entryTitle);
+          setQuestion(() => worldData.worlds.Athenian.entryQuestion);
           setImage(() => ({backgroundImage: "url(/athenian.jpg)"}));
         }else if(city == "Dwarf") {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription();
-          setTitle(() => "Dwarven Kingdom");
-          setQuestion();
+          setDescription(worldData.worlds.Dwarf.entryDescription);
+          setTitle(() => worldData.worlds.Dwarf.entryTitle);
+          setQuestion(worldData.worlds.Dwarf.entryQuestion);
           setImage(() => ({backgroundImage: "url(/dwarf.jpg)"}));
         }else if(city == "Elf") {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription();
-          setTitle(() => "Elven Villiage");
-          setQuestion();
+          setDescription(worldData.worlds.Elf.entryDescription);
+          setTitle(() => worldData.worlds.Elf.entryTitle);
+          setQuestion(worldData.worlds.Elf.entryQuestion);
           setImage(() => ({backgroundImage: "url(/elf.jpg)"}));
         }else if(city == "Nomad") {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription();
-          setTitle(() => "Nomadic Camps");
-          setQuestion();
+          setDescription(worldData.worlds.Nomad.entryDescription);
+          setTitle(() => worldData.worlds.Nomad.entryTitle);
+          setQuestion(worldData.worlds.Nomad.entryQuestion);
           setImage(() => ({backgroundImage: "url(/nomad.jpg)"}));
         }else {
           setTitle(() => "Home");
+          setDescription();
+          setQuestion();
           setOptions(() => [
             {option: "Head towards the Elven village", action: () => {me.travel("Elf")}},
             {option: "Make your way to the Athenian city", action: () => {me.travel("Athenian")}},

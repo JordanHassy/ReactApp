@@ -1,0 +1,103 @@
+{
+    "worlds": {
+        "Athenian": {
+            "entryTitle": "Athenian City",
+            "entryDescription": "Welcome to Athens",
+            "entryQuestion": "Athenian?",
+            "entryChoices": {
+                
+            },
+            "entryImage": "backgroundImage: 'url(/athenian.jpg)'"
+        }, 
+        "Dwarf": {
+            "entryTitle": "Dwarven Kindgdom",
+            "entryDescription": "Welcome to Dwarf land",
+            "entryQuestion": "Dwarven?",
+            "entryChoices": {
+                
+            },
+            "entryImage": "/dwarf.jpg"
+        },  
+        "Elf": {
+            "entryTitle": "Elven Villiage",
+            "entryDescription": "Welcome to Elf place",
+            "entryQuestion": "Elven?",
+            "entryChoices": {
+                
+            },
+            "entryImage": "/elven.jpg"
+        },  
+        "Nomad": {
+            "entryTitle": "Nomadic Camps",
+            "entryDescription": "Welcome to Nomad land",
+            "entryQuestion": "Nomad?",
+            "entryChoices": {
+                
+            },
+            "entryImage": "/nomad.jpg"
+        }
+    },
+    "items": [
+        {
+            "id": "0",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "1",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "2",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "3",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "4",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "5",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "6",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "7",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "8",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": "9",
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        }
+        
+    ]
+}
