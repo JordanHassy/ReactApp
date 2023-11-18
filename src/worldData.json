@@ -1,101 +1,214 @@
 {
-    "worlds": {
-        "Athenian": {
+    "worlds": [
+
+        {
+            "id": 0,
+            "Name": "Start",
+            "entryTitle": "Welcome to the World of Terraquor!",
+            "entryDescription": "You awaken in the heart of a lush forest surrounded by tall, ancient trees. You see the faint glow of a small Elven village to the north, an Athenian city to the west, Nomadic camps to the east, and the Dwarven kingdom to the north.",
+            "entryQuestion": "Which path will you choose?",
+            "entryChoices":[
+                {
+                    "text": "Make your way to the Athenian city",
+                    "travelDestination": 1
+                },
+                {
+                    "text": "Embark towards the Dwarven kingdom in the north",
+                    "travelDestination": 2
+                },                
+                {
+                    "text": "Head towards the Elven village",
+                    "travelDestination": 3
+                },
+                {
+                    "text": "Journey east to the Nomadic camps",
+                    "travelDestination": 4
+                }
+            ],
+            "entryImage": "url(/titleImage.jpg)",
+            "animals": []
+        }, 
+        {
+            "id": 1,
+            "Name": "Athenian City",
             "entryTitle": "Athenian City",
             "entryDescription": "Welcome to Athens",
             "entryQuestion": "Athenian?",
             "entryChoices": {
                 
             },
-            "entryImage": "backgroundImage: 'url(/athenian.jpg)'"
+            "entryImage": "url(/athenian.jpg)",
+            "animals": []
         }, 
-        "Dwarf": {
+        {
+            "id": 2,
+            "Name": "Dwarven Kindgdom",
             "entryTitle": "Dwarven Kindgdom",
             "entryDescription": "Welcome to Dwarf land",
             "entryQuestion": "Dwarven?",
             "entryChoices": {
                 
             },
-            "entryImage": "/dwarf.jpg"
+            "entryImage": "/dwarf.jpg",
+            "animals": []
         },  
-        "Elf": {
+        {
+            "id": 3,
+            "Name": "Elven Villiage",
             "entryTitle": "Elven Villiage",
             "entryDescription": "Welcome to Elf place",
             "entryQuestion": "Elven?",
             "entryChoices": {
                 
             },
-            "entryImage": "/elven.jpg"
+            "entryImage": "url(/elven.jpg)",
+            "animals": []
         },  
-        "Nomad": {
+        {
+            "id": 4,
+            "Name": "Nomadic Camps",
             "entryTitle": "Nomadic Camps",
             "entryDescription": "Welcome to Nomad land",
             "entryQuestion": "Nomad?",
             "entryChoices": {
                 
             },
-            "entryImage": "/nomad.jpg"
+            "entryImage": "url(/nomad.jpg)",
+            "animals": []
         }
-    },
+    ],
     "items": [
         {
-            "id": "0",
+            "id": 0,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "1",
+            "id": 1,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "2",
+            "id": 2,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "3",
+            "id": 3,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "4",
+            "id": 4,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "5",
+            "id": 5,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "6",
+            "id": 6,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "7",
+            "id": 7,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "8",
+            "id": 8,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "9",
+            "id": 9,
             "name": "",
             "functionality": "",
+            "icon": ""
+        }
+        
+    ],
+    "weapons": [
+        {
+            "id": 0,
+            "name": "Fists",
+            "damage": 1,
+            "descrition": "The trusty old fists",
+            "icon": ""
+        },
+        {
+            "id": 1,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 3,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 4,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 5,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 6,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 7,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 8,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 9,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
             "icon": ""
         }
         

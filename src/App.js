@@ -14,16 +14,20 @@ function App() {
   //Basically, we can use classes, and update the data in our classes, but those will not dynamically render anything.
   //When we want to render something, we need to use some sort of button or interactable item that uses our classes to update
   //one of these state variables.
-  const [description, setDescription] = useState("You awaken in the heart of a lush forest surrounded by tall, ancient trees. You see the faint glow of a small Elven village to the north, an Athenian city to the west, Nomadic camps to the east, and the Dwarven kingdom to the north.");
+  const [description, setDescription] = useState(worldData.worlds[0].entryDescription);
   const [options, setOptions] = useState([
-    {option: "Head towards the Elven village", action: () => {me.travel("Elf")}},
-    {option: "Make your way to the Athenian city", action: () => {me.travel("Athenian")}},
-    {option: "Journey east to the Nomadic camps", action: () => {me.travel("Nomad")}},
-    {option: "Embark towards the Dwarven kingdom in the north", action: () => {me.travel("Dwarf")}}]);
-  const [question, setQuestion] = useState("Which path will you choose?");
-  const [title, setTitle] = useState("Welcome to the World of Terraquor!");
+    {option: worldData.worlds[0].entryChoices[0].text, 
+      action: () => {me.travel(worldData.worlds[0].entryChoices[0].travelDestination)}},
+    {option: worldData.worlds[0].entryChoices[1].text, 
+      action: () => {me.travel(worldData.worlds[0].entryChoices[1].travelDestination)}},
+    {option: worldData.worlds[0].entryChoices[2].text, 
+      action: () => {me.travel(worldData.worlds[0].entryChoices[2].travelDestination)}},
+    {option: worldData.worlds[0].entryChoices[3].text, 
+      action: () => {me.travel(worldData.worlds[0].entryChoices[3].travelDestination)}}]);
+  const [question, setQuestion] = useState(worldData.worlds[0].entryQuestion);
+  const [title, setTitle] = useState(worldData.worlds[0].entryTitle);
   const [boxVis, setBoxVis] = useState(1);
-  const [image, setImage] = useState({backgroundImage: "url(/titleImage.jpg)"});
+  const [image, setImage] = useState({backgroundImage: worldData.worlds[0].entryImage});
   //================================================================================================================
   //FUNCTIONS
   //================================================================================================================
@@ -36,41 +40,53 @@ function App() {
       this.name = name;
       this.level = level;
       this.inventory = [];
-      this.travel = (city) => {
-        if(city == "Athenian") {
+      this.weapon = 0;
+      this.travel = (cityId) => {
+        setBoxVis(() => 0);
+        // World ids are as follows
+        //0 -> Start
+        //1 -> Athenian City
+        //2 -> Dwarven Kingdom
+        // 3 -> Elven Villiage
+        //4 -> Nomad Camps
+        if(cityId == 1) {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(() => worldData.worlds.Athenian.entryDescription);
-          setTitle(() => worldData.worlds.Athenian.entryTitle);
-          setQuestion(() => worldData.worlds.Athenian.entryQuestion);
+          setDescription(() => worldData.worlds[1].entryDescription);
+          setTitle(() => worldData.worlds[1].entryTitle);
+          setQuestion(() => worldData.worlds[1].entryQuestion);
           setImage(() => ({backgroundImage: "url(/athenian.jpg)"}));
-        }else if(city == "Dwarf") {
+        }else if(cityId == 2) {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds.Dwarf.entryDescription);
-          setTitle(() => worldData.worlds.Dwarf.entryTitle);
-          setQuestion(worldData.worlds.Dwarf.entryQuestion);
+          setDescription(worldData.worlds[2].entryDescription);
+          setTitle(() => worldData.worlds[2].entryTitle);
+          setQuestion(worldData.worlds[2].entryQuestion);
           setImage(() => ({backgroundImage: "url(/dwarf.jpg)"}));
-        }else if(city == "Elf") {
+        }else if(cityId == 3) {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds.Elf.entryDescription);
-          setTitle(() => worldData.worlds.Elf.entryTitle);
-          setQuestion(worldData.worlds.Elf.entryQuestion);
+          setDescription(worldData.worlds[3].entryDescription);
+          setTitle(() => worldData.worlds[3].entryTitle);
+          setQuestion(worldData.worlds[3].entryQuestion);
           setImage(() => ({backgroundImage: "url(/elf.jpg)"}));
-        }else if(city == "Nomad") {
+        }else if(cityId == 4) {
           setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds.Nomad.entryDescription);
-          setTitle(() => worldData.worlds.Nomad.entryTitle);
-          setQuestion(worldData.worlds.Nomad.entryQuestion);
+          setDescription(worldData.worlds[4].entryDescription);
+          setTitle(() => worldData.worlds[4].entryTitle);
+          setQuestion(worldData.worlds[4].entryQuestion);
           setImage(() => ({backgroundImage: "url(/nomad.jpg)"}));
         }else {
-          setTitle(() => "Home");
-          setDescription();
-          setQuestion();
+          setTitle(() => worldData.worlds[0].entryTitle);
+          setDescription(() => worldData.worlds[0].entryDescription);
+          setQuestion(() => worldData.worlds[0].entryQuestion);
           setOptions(() => [
-            {option: "Head towards the Elven village", action: () => {me.travel("Elf")}},
-            {option: "Make your way to the Athenian city", action: () => {me.travel("Athenian")}},
-            {option: "Journey east to the Nomadic camps", action: () => {me.travel("Nomad")}},
-            {option: "Embark towards the Dwarven kingdom in the north", action: () => {me.travel("Dwarf")}}])
-          setImage(() => ({backgroundImage: "url(/titleImage.jpg)"}));
+            {option: worldData.worlds[0].entryChoices[0].text, 
+              action: () => {me.travel(worldData.worlds[0].entryChoices[0].travelDestination)}},
+            {option: worldData.worlds[0].entryChoices[1].text, 
+              action: () => {me.travel(worldData.worlds[0].entryChoices[1].travelDestination)}},
+            {option: worldData.worlds[0].entryChoices[2].text, 
+              action: () => {me.travel(worldData.worlds[0].entryChoices[2].travelDestination)}},
+            {option: worldData.worlds[0].entryChoices[3].text, 
+              action: () => {me.travel(worldData.worlds[0].entryChoices[3].travelDestination)}}])
+          setImage(() => ({backgroundImage: worldData.worlds[0].entryImage}));
         }
       } 
     }
@@ -92,7 +108,10 @@ function App() {
       The .jsx extension is the same thing as a .js extension, the logo just looks cooler, and using
       .jsx for all components we create will make it easier to navigate between logic(.js files) and
       components(.jsx files)*/}
-      {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
+      {!boxVis ? <button onClick={() => setBoxVis(() => 1)}>Hello</button> : null}
+      <div class="vertical-center">
+        {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
+      </div>
     </div>
   );
 }
