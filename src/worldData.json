@@ -26,7 +26,17 @@
                 }
             ],
             "entryImage": "url(/titleImage.jpg)",
-            "animals": []
+            "animals": [],
+            "rooms": [
+                {
+                    "id": 0,
+                    "name": "",
+                    "character": 0,
+                    "object1": 0,
+                    "object2": 0,
+                    "backgroundImage": "url()"
+                }
+            ]
         }, 
         {
             "id": 1,
