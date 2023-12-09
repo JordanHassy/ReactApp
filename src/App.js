@@ -32,6 +32,38 @@ function App() {
   //FUNCTIONS
   //================================================================================================================
   
+  async function sleep(milliseconds) {
+    return new Promise(resolve=>setTimeout(resolve, milliseconds));
+  }
+
+  async function rollOutText(description, question, options) {
+    setDescription();
+    setOptions(() =>[]);
+    setQuestion();
+    let i = 0;
+    while(i <= description.length) {
+      if(description[i-2] === '.') {
+        await sleep(1000);
+      }
+      if(description[i-2] === ',') {
+        await sleep(300);
+      }
+      setDescription(() => description.substring(0, i));
+      
+      //text rolls out faster for longer text
+      await sleep(1000/description.length + description.length/(description.length/10));
+      i += 1;
+    }
+
+    while(i <= question.length) {
+      setQuestion(() => question.substring(0, i));
+      await sleep(1000/question.length);
+      i += 1;
+    }
+
+    setOptions(() => options);
+
+  }
   //================================================================================================================
   //CLASSES
   //================================================================================================================
@@ -42,7 +74,7 @@ function App() {
       this.inventory = [];
       this.weapon = 0;
       this.travel = (cityId) => {
-        setBoxVis(() => 0);
+        // setBoxVis(() => 0);
         // World ids are as follows
         //0 -> Start
         //1 -> Athenian City
@@ -50,45 +82,68 @@ function App() {
         // 3 -> Elven Villiage
         //4 -> Nomad Camps
         if(cityId == 1) {
-          setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(() => worldData.worlds[1].entryDescription);
+          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
+          rollOutText(worldData.worlds[1].entryDescription,
+            worldData.worlds[1].entryQuestion,
+            [{option: "return home", action: () => {me.travel()}}]);
+          // setDescription(() => worldData.worlds[1].entryDescription);
           setTitle(() => worldData.worlds[1].entryTitle);
-          setQuestion(() => worldData.worlds[1].entryQuestion);
+          //setQuestion(() => worldData.worlds[1].entryQuestion);
           setImage(() => ({backgroundImage: "url(/athenian.jpg)"}));
         }else if(cityId == 2) {
-          setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds[2].entryDescription);
+          rollOutText(worldData.worlds[2].entryDescription,
+            worldData.worlds[2].entryQuestion,
+            [{option: "return home", action: () => {me.travel()}}]);
+          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
+          //setDescription(worldData.worlds[2].entryDescription);
           setTitle(() => worldData.worlds[2].entryTitle);
-          setQuestion(worldData.worlds[2].entryQuestion);
+          //setQuestion(worldData.worlds[2].entryQuestion);
           setImage(() => ({backgroundImage: "url(/dwarf.jpg)"}));
         }else if(cityId == 3) {
-          setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds[3].entryDescription);
+          rollOutText(worldData.worlds[3].entryDescription,
+            worldData.worlds[3].entryQuestion,
+            [{option: "return home", action: () => {me.travel()}}]);
+          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
+          //setDescription(worldData.worlds[3].entryDescription);
           setTitle(() => worldData.worlds[3].entryTitle);
-          setQuestion(worldData.worlds[3].entryQuestion);
+          //setQuestion(worldData.worlds[3].entryQuestion);
           setImage(() => ({backgroundImage: "url(/elf.jpg)"}));
         }else if(cityId == 4) {
-          setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          setDescription(worldData.worlds[4].entryDescription);
+          rollOutText(worldData.worlds[4].entryDescription,
+            worldData.worlds[4].entryQuestion,
+            [{option: "return home", action: () => {me.travel()}}]);
+          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
+          //setDescription(worldData.worlds[4].entryDescription);
           setTitle(() => worldData.worlds[4].entryTitle);
-          setQuestion(worldData.worlds[4].entryQuestion);
+          //setQuestion(worldData.worlds[4].entryQuestion);
           setImage(() => ({backgroundImage: "url(/nomad.jpg)"}));
         }else {
+          rollOutText(worldData.worlds[0].entryDescription,
+            worldData.worlds[0].entryQuestion,
+            [
+              {option: worldData.worlds[0].entryChoices[0].text, 
+                action: () => {me.travel(worldData.worlds[0].entryChoices[0].travelDestination)}},
+              {option: worldData.worlds[0].entryChoices[1].text, 
+                action: () => {me.travel(worldData.worlds[0].entryChoices[1].travelDestination)}},
+              {option: worldData.worlds[0].entryChoices[2].text, 
+                action: () => {me.travel(worldData.worlds[0].entryChoices[2].travelDestination)}},
+              {option: worldData.worlds[0].entryChoices[3].text, 
+                action: () => {me.travel(worldData.worlds[0].entryChoices[3].travelDestination)}}]);
           setTitle(() => worldData.worlds[0].entryTitle);
-          setDescription(() => worldData.worlds[0].entryDescription);
-          setQuestion(() => worldData.worlds[0].entryQuestion);
-          setOptions(() => [
-            {option: worldData.worlds[0].entryChoices[0].text, 
-              action: () => {me.travel(worldData.worlds[0].entryChoices[0].travelDestination)}},
-            {option: worldData.worlds[0].entryChoices[1].text, 
-              action: () => {me.travel(worldData.worlds[0].entryChoices[1].travelDestination)}},
-            {option: worldData.worlds[0].entryChoices[2].text, 
-              action: () => {me.travel(worldData.worlds[0].entryChoices[2].travelDestination)}},
-            {option: worldData.worlds[0].entryChoices[3].text, 
-              action: () => {me.travel(worldData.worlds[0].entryChoices[3].travelDestination)}}])
+          //setDescription(() => worldData.worlds[0].entryDescription);
+          //setQuestion(() => worldData.worlds[0].entryQuestion);
+          // setOptions(() => [
+          //   {option: worldData.worlds[0].entryChoices[0].text, 
+          //     action: () => {me.travel(worldData.worlds[0].entryChoices[0].travelDestination)}},
+          //   {option: worldData.worlds[0].entryChoices[1].text, 
+          //     action: () => {me.travel(worldData.worlds[0].entryChoices[1].travelDestination)}},
+          //   {option: worldData.worlds[0].entryChoices[2].text, 
+          //     action: () => {me.travel(worldData.worlds[0].entryChoices[2].travelDestination)}},
+          //   {option: worldData.worlds[0].entryChoices[3].text, 
+          //     action: () => {me.travel(worldData.worlds[0].entryChoices[3].travelDestination)}}])
           setImage(() => ({backgroundImage: worldData.worlds[0].entryImage}));
         }
-      } 
+      }
     }
   }
 
@@ -108,7 +163,7 @@ function App() {
       The .jsx extension is the same thing as a .js extension, the logo just looks cooler, and using
       .jsx for all components we create will make it easier to navigate between logic(.js files) and
       components(.jsx files)*/}
-      {!boxVis ? <button onClick={() => setBoxVis(() => 1)}>Hello</button> : null}
+      <button onClick={() => setBoxVis(() => !boxVis)}>Hide/Show Text Box</button>
       <div class="vertical-center">
         {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
       </div>
