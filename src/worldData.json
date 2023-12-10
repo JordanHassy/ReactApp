@@ -355,9 +355,9 @@
         },
         {
             "id": 1,
-            "name": "",
-            "damage": 0,
-            "descrition": "",
+            "name": "Knife",
+            "damage": 3,
+            "descrition": "A durable and versatile blade",
             "icon": ""
         },
         {
