@@ -1,101 +1,378 @@
 {
-    "worlds": {
-        "Athenian": {
-            "entryTitle": "Athenian City",
-            "entryDescription": "Welcome to Athens",
-            "entryQuestion": "Athenian?",
-            "entryChoices": {
-                
+    "rooms": [
+        {
+          "id": 0,
+          "name": "Witch's Hut",
+          "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
+          "question": "Which path will you choose?",
+          "choices": [
+            {
+              "text": "Sleep the night off",
+              "travelDestination": 1,
+              "npcID": -1,
+              "itemID": -1
             },
-            "entryImage": "backgroundImage: 'url(/athenian.jpg)'"
-        }, 
-        "Dwarf": {
-            "entryTitle": "Dwarven Kindgdom",
-            "entryDescription": "Welcome to Dwarf land",
-            "entryQuestion": "Dwarven?",
-            "entryChoices": {
-                
+            {
+              "text": "Explore the Hut",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1
             },
-            "entryImage": "/dwarf.jpg"
-        },  
-        "Elf": {
-            "entryTitle": "Elven Villiage",
-            "entryDescription": "Welcome to Elf place",
-            "entryQuestion": "Elven?",
-            "entryChoices": {
-                
+            {
+              "text": "Explore the Living Room",
+              "travelDestination": 3,
+              "npcID": -1,
+              "itemID": -1
             },
-            "entryImage": "/elven.jpg"
-        },  
-        "Nomad": {
-            "entryTitle": "Nomadic Camps",
-            "entryDescription": "Welcome to Nomad land",
-            "entryQuestion": "Nomad?",
-            "entryChoices": {
-                
+            {
+              "text": "Explore the Bedroom (It’s locked)",
+              "travelDestination": 4,
+              "npcID": -1,
+              "itemID": -1
             },
-            "entryImage": "/nomad.jpg"
+            {
+              "text": "Explore the Basement (Chance of DEATH)",
+              "travelDestination": 5,
+              "npcID": -1,
+              "itemID": -1
+            },
+            {
+              "text": "Explore the Garden (Key available to pick up)",
+              "travelDestination": 6,
+              "npcID": -1,
+              "itemID": -1
+            }
+          ],
+          "image": "url(/witchsHut.jpg)"
+        },
+        {
+          "id": 1,
+          "name": "Witch's Hut - Sleep",
+          "description": "Finnrick sleeps the night off in the witch's hut.",
+          "question": "",
+          "choices": [],
+          "image": "url(/sleepingRoom.jpg)"
+        },
+        {
+          "id": 2,
+          "name": "Witch's Hut - Living Room",
+          "description": "Finnrick explores the living room of the witch's hut.",
+          "question": "",
+          "choices": [],
+          "image": "url(/livingRoom.jpg)"
+        },
+        {
+          "id": 3,
+          "name": "Witch's Hut - Bedroom",
+          "description": "Finnrick explores the bedroom of the witch's hut.",
+          "question": "",
+          "choices": [],
+          "image": "url(/bedroom.jpg)"
+        },
+        {
+          "id": 4,
+          "name": "Witch's Hut - Basement",
+          "description": "Finnrick explores the basement of the witch's hut. (Chance of DEATH)",
+          "question": "",
+          "choices": [],
+          "image": "url(/basement.jpg)"
+        },
+        {
+          "id": 5,
+          "name": "Witch's Hut - Garden",
+          "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
+          "question": "",
+          "choices": [],
+          "image": "url(/garden.jpg)"
+        },
+        {
+          "id": 6,
+          "name": "Witch's Hut - Garden - Daytime",
+          "description": "Finnrick leaves the witch's hut and continues on his journey.",
+          "question": "",
+          "choices": [],
+          "image": "url(/daytimeGarden.jpg)"
+        },
+        {
+          "id": 7,
+          "name": "Tavern",
+          "description": "Finnrick ends up sitting at the counter while waiting for his friend and meets a man named Avis.",
+          "question": "What will you do in the Tavern?",
+          "choices": [
+            {
+              "text": "Rest and heal at the Inn",
+              "travelDestination": 8,
+              "npcID": -1
+            },
+            {
+              "text": "Buy food/ailments at the Market",
+              "travelDestination": 9,
+              "npcID": -1
+            },
+            {
+              "text": "Get weapons/armor at the Blacksmith",
+              "travelDestination": 10,
+              "npcID": -1
+            },
+            {
+              "text": "Continue to the Tavern to meet Avis and progress",
+              "travelDestination": 11,
+              "npcID": -1
+            }
+          ],
+          "image": "url(/tavern.jpg)"
+        },
+        {
+          "id": 8,
+          "name": "Tavern - Inn",
+          "description": "Finnrick rests and heals at the Inn.",
+          "question": "",
+          "choices": [],
+          "image": "url(/inn.jpg)"
+        },
+        {
+          "id": 9,
+          "name": "Tavern - Market",
+          "description": "Finnrick buys food and ailments at the Market.",
+          "question": "",
+          "choices": [],
+          "image": "url(/market.jpg)"
+        },
+        {
+          "id": 10,
+          "name": "Tavern - Blacksmith",
+          "description": "Finnrick gets weapons and armor at the Blacksmith.",
+          "question": "",
+          "choices": [],
+          "image": "url(/blacksmith.jpg)"
+        },
+        {
+          "id": 11,
+          "name": "Tavern - Avis's Table",
+          "description": "Finnrick meets Avis and learns about the Eternal Keep. He decides to go on the journey.",
+          "question": "What will you do in the Tavern?",
+          "choices": [
+            {
+              "text": "Stay the night and shop, then leave",
+              "travelDestination": 14,
+              "npcID": -1
+            }
+          ],
+          "image": "url(/avisTable.jpg)"
+        },
+        {
+          "id": 12,
+          "name": "Rivershore Docs",
+          "description": "Finnrick leaves Thornhill and makes his journey towards the dreary town of Rivershore.",
+          "question": "Where will you go in Rivershore?",
+          "choices": [
+            {
+              "text": "Go to Markets",
+              "travelDestination": 13,
+              "npcID": -1
+            },
+            {
+              "text": "Go to Blacksmith",
+              "travelDestination": 14,
+              "npcID": -1
+            },
+            {
+              "text": "Go to Apothecary",
+              "travelDestination": 15,
+              "npcID": -1
+            }
+          ],
+          "image": "url(/rivershoreDocs.jpg)"
+        },
+        {
+          "id": 13,
+          "name": "Rivershore Docs - Markets",
+          "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
+          "question": "What will you do in the Markets?",
+          "choices": [],
+          "image": "url(/markets.jpg)"
+        },
+        {
+          "id": 14,
+          "name": "Rivershore Docs - Blacksmith",
+          "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
+          "question": "What will you do in the Blacksmith?",
+          "choices": [],
+          "image": "url(/blacksmith.jpg)"
+        },
+        {
+          "id": 15,
+          "name": "Rivershore Docs - Apothecary",
+          "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
+          "question": "What will you do in the Apothecary?",
+          "choices": [],
+          "image": "url(/apothecary.jpg)"
+        },
+        {
+          "id": 16,
+          "name": "Rivershore Docs (Fisherman)",
+          "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
+          "question": "",
+          "choices": [],
+          "image": "url(/rivershoreDocs.jpg)"
+        },
+        {
+          "id": 17,
+          "name": "Mountainside Path",
+          "description": "Finnrick approaches the mountain after setting north from Rivershore.",
+          "question": "",
+          "choices": [],
+          "image": "url(/mountainsidePath.jpg)"
+        },
+        {
+          "id": 18,
+          "name": "Eternal Keep of Terraquor",
+          "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
+          "question": "",
+          "choices": [],
+          "image": "url(/eternalKeep.jpg)"
+        },
+        {
+          "id": 19,
+          "name": "Thanks For Playing!",
+          "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
+          "question": "",
+          "choices": [],
+          "image": "url(/finish.jpg)"
         }
-    },
+      ],
     "items": [
         {
-            "id": "0",
+            "id": 0,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "1",
+            "id": 1,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "2",
+            "id": 2,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "3",
+            "id": 3,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "4",
+            "id": 4,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "5",
+            "id": 5,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "6",
+            "id": 6,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "7",
+            "id": 7,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "8",
+            "id": 8,
             "name": "",
             "functionality": "",
             "icon": ""
         },
         {
-            "id": "9",
+            "id": 9,
             "name": "",
             "functionality": "",
+            "icon": ""
+        }
+        
+    ],
+    "weapons": [
+        {
+            "id": 0,
+            "name": "Fists",
+            "damage": 1,
+            "descrition": "The trusty old fists",
+            "icon": ""
+        },
+        {
+            "id": 1,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 3,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 4,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 5,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 6,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 7,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 8,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 9,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
             "icon": ""
         }
         
