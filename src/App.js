@@ -14,20 +14,21 @@ function App() {
   //Basically, we can use classes, and update the data in our classes, but those will not dynamically render anything.
   //When we want to render something, we need to use some sort of button or interactable item that uses our classes to update
   //one of these state variables.
-  const [description, setDescription] = useState(worldData.rooms[0].entryDescription);
+  const [description, setDescription] = useState(worldData.rooms[0].description);
   const [options, setOptions] = useState([
-    {option: worldData.rooms[0].entryChoices[0].text, 
-      action: () => {me.travel(worldData.rooms[0].entryChoices[0].travelDestination)}},
-    {option: worldData.rooms[0].entryChoices[1].text, 
-      action: () => {me.travel(worldData.rooms[0].entryChoices[1].travelDestination)}},
-    {option: worldData.rooms[0].entryChoices[2].text, 
-      action: () => {me.travel(worldData.rooms[0].entryChoices[2].travelDestination)}},
-    {option: worldData.rooms[0].entryChoices[3].text, 
-      action: () => {me.travel(worldData.rooms[0].entryChoices[3].travelDestination)}}]);
-  const [question, setQuestion] = useState(worldData.rooms[0].entryQuestion);
-  const [title, setTitle] = useState(worldData.rooms[0].entryTitle);
+    {option: worldData.rooms[0].choices[0].text, 
+      action: () => {me.travel(worldData.rooms[0].choices[0].travelDestination)}},
+    {option: worldData.rooms[0].choices[1].text, 
+      action: () => {me.travel(worldData.rooms[0].choices[1].travelDestination)}},
+    {option: worldData.rooms[0].choices[2].text, 
+      action: () => {me.travel(worldData.rooms[0].choices[2].travelDestination)}},
+    {option: worldData.rooms[0].choices[3].text, 
+      action: () => {me.travel(worldData.rooms[0].choices[3].travelDestination)}}]);
+  const [question, setQuestion] = useState(worldData.rooms[0].question);
+  const [title, setTitle] = useState(worldData.rooms[0].title);
   const [boxVis, setBoxVis] = useState(1);
-  const [image, setImage] = useState({backgroundImage: worldData.rooms[0].entryImage});
+  const [image, setImage] = useState({backgroundImage: worldData.rooms[0].image});
+  const [done, setDone] = useState(0);
   //visited uses bit manipulation to test if room is visited. if room id bit is on, it has been 
   //visited, and therefore text will not roll out in rollOutText
   const [visited, setVisited] = useState(0); 
@@ -88,76 +89,15 @@ function App() {
       this.level = level;
       this.inventory = [];
       this.weapon = 0;
+      //set title and description to corresponding for the world
+      //only roll out that text if world is unvisited.
+      //set options to map to all options for that world
       this.travel = (cityId) => {
-        // setBoxVis(() => 0);
-        // World ids are as follows
-        //0 -> Start
-        //1 -> Athenian City
-        //2 -> Dwarven Kingdom
-        // 3 -> Elven Villiage
-        //4 -> Nomad Camps
-        if(cityId == 1) {
-          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          rollOutText(1, worldData.rooms[1].entryDescription,
-            worldData.rooms[1].entryQuestion,
-            [{option: "return home", action: () => {me.travel()}}]);
-          // setDescription(() => worldData.rooms[1].entryDescription);
-          setTitle(() => worldData.rooms[1].entryTitle);
-          //setQuestion(() => worldData.rooms[1].entryQuestion);
-          setImage(() => ({backgroundImage: "url(/athenian.jpg)"}));
-        }else if(cityId == 2) {
-          rollOutText(2, worldData.rooms[2].entryDescription,
-            worldData.rooms[2].entryQuestion,
-            [{option: "return home", action: () => {me.travel()}}]);
-          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          //setDescription(worldData.rooms[2].entryDescription);
-          setTitle(() => worldData.rooms[2].entryTitle);
-          //setQuestion(worldData.rooms[2].entryQuestion);
-          setImage(() => ({backgroundImage: "url(/dwarf.jpg)"}));
-        }else if(cityId == 3) {
-          rollOutText(3, worldData.rooms[3].entryDescription,
-            worldData.rooms[3].entryQuestion,
-            [{option: "return home", action: () => {me.travel()}}]);
-          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          //setDescription(worldData.rooms[3].entryDescription);
-          setTitle(() => worldData.rooms[3].entryTitle);
-          //setQuestion(worldData.rooms[3].entryQuestion);
-          setImage(() => ({backgroundImage: "url(/elf.jpg)"}));
-        }else if(cityId == 4) {
-          rollOutText(4, worldData.rooms[4].entryDescription,
-            worldData.rooms[4].entryQuestion,
-            [{option: "return home", action: () => {me.travel()}}]);
-          //setOptions(() => [{option: "return home", action: () => {me.travel()}}]);
-          //setDescription(worldData.rooms[4].entryDescription);
-          setTitle(() => worldData.rooms[4].entryTitle);
-          //setQuestion(worldData.rooms[4].entryQuestion);
-          setImage(() => ({backgroundImage: "url(/nomad.jpg)"}));
-        }else {
-          rollOutText(0, worldData.rooms[0].entryDescription,
-            worldData.rooms[0].entryQuestion,
-            [
-              {option: worldData.rooms[0].entryChoices[0].text, 
-                action: () => {me.travel(worldData.rooms[0].entryChoices[0].travelDestination)}},
-              {option: worldData.rooms[0].entryChoices[1].text, 
-                action: () => {me.travel(worldData.rooms[0].entryChoices[1].travelDestination)}},
-              {option: worldData.rooms[0].entryChoices[2].text, 
-                action: () => {me.travel(worldData.rooms[0].entryChoices[2].travelDestination)}},
-              {option: worldData.rooms[0].entryChoices[3].text, 
-                action: () => {me.travel(worldData.rooms[0].entryChoices[3].travelDestination)}}]);
-          setTitle(() => worldData.rooms[0].entryTitle);
-          //setDescription(() => worldData.rooms[0].entryDescription);
-          //setQuestion(() => worldData.rooms[0].entryQuestion);
-          // setOptions(() => [
-          //   {option: worldData.rooms[0].entryChoices[0].text, 
-          //     action: () => {me.travel(worldData.rooms[0].entryChoices[0].travelDestination)}},
-          //   {option: worldData.rooms[0].entryChoices[1].text, 
-          //     action: () => {me.travel(worldData.rooms[0].entryChoices[1].travelDestination)}},
-          //   {option: worldData.rooms[0].entryChoices[2].text, 
-          //     action: () => {me.travel(worldData.rooms[0].entryChoices[2].travelDestination)}},
-          //   {option: worldData.rooms[0].entryChoices[3].text, 
-          //     action: () => {me.travel(worldData.rooms[0].entryChoices[3].travelDestination)}}])
-          setImage(() => ({backgroundImage: worldData.rooms[0].entryImage}));
-        }
+        setTitle(() => worldData.worlds[cityId].title);
+
+        let options = worldData.worlds[cityId].choices
+
+        rollOutText();
       }
     }
   }

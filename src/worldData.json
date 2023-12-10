@@ -231,6 +231,14 @@
           "question": "",
           "choices": [],
           "image": "url(/eternalKeep.jpg)"
+        },
+        {
+          "id": 19,
+          "name": "Thanks For Playing!",
+          "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
+          "question": "",
+          "choices": [],
+          "image": "url(/finish.jpg)"
         }
       ],
     "items": [
