@@ -241,6 +241,47 @@
           "image": "url(/finish.jpg)"
         }
       ],
+    "npcs": [
+        {
+            "id": 0,
+            "name": "exampleName",
+            "hp": 100,
+            "itemOfferedID": 0,
+            "dialogue": [
+                {
+                    "quote": "Hello Traveler",
+                    "responses": [
+                        {
+                            "option": "Hello NPC!"
+                        },
+                        {
+                            "option": "leave conversation"
+                        }
+                    ]
+                },
+                {
+                    "quote": "Would you like an item?",
+                    "responses": [
+                        {
+                            "option": "Yes Please!"
+                        },
+                        {
+                            "option": "No"
+                        }
+                    ]
+                }
+
+            ],
+            "attackMoves": [ 
+                {
+                    "attack": "NPC hits you with a blast of lightning dealing 10 damage"
+                },
+                {
+                    "attack": "NPC hits you with a blast of fire dealing 5 damage"
+                }
+            ]
+        }
+    ],
     "items": [
         {
             "id": 0,
