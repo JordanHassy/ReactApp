@@ -131,7 +131,7 @@
         {
           "id": 5,
           "title": "Witch's Hut - Garden",
-          "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
+          "description": "Finnrick explores the garden of the witch's hut.",
           "question": "Your attention is drawn to a small weathered key nestled amidst the shadows.",
           "choices": [
             {
@@ -160,7 +160,7 @@
           "question": "",
           "choices": [
             {
-              "text": "Go to Tavern",
+              "text": "Travel to Thornhill",
               "travelDestination": 7,
               "npcID": -1,
               "keyID": -1
@@ -170,9 +170,9 @@
         }, 
         {
           "id": 7,
-          "title": "Tavern",
-          "description": "Finnrick ends up sitting at the counter while waiting for his friend and meets a man named Avis.",
-          "question": "What will you do in the Tavern?",
+          "title": "Thornhill",
+          "description": "Welcome to Thornhill",
+          "question": "",
           "choices": [
             {
               "text": "Rest and heal at the Inn",
@@ -187,7 +187,7 @@
               "keyID": -1
             },
             {
-              "text": "Get weapons/armor at the Blacksmith",
+              "text": "Purchase weapons/armor at the Blacksmith",
               "travelDestination": 10,
               "npcID": -1,
               "keyID": -1
@@ -228,7 +228,7 @@
         {
           "id": 11,
           "title": "Tavern - Avis's Table",
-          "description": "Finnrick meets Avis and learns about the Eternal Keep. He decides to go on the journey.",
+          "description": "When Finnrick goes to Tavern he ends up sitting at the counter while waiting for his friend and meets a man named Avis. Finnrick learns about the Eternal Keep. He decides to go on the journey.",
           "question": "What will you do in the Tavern?",
           "choices": [
             {
