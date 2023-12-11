@@ -303,10 +303,12 @@
             ],
             "attackMoves": [ 
                 {
-                    "attack": "NPC hits you with a blast of lightning dealing 10 damage"
+                  "attack": "NPC hits you with a blast of lightning",
+                  "damage": 10
                 },
                 {
-                    "attack": "NPC hits you with a blast of fire dealing 5 damage"
+                  "attack": "NPC hits you with a blast of fire",
+                  "damage": 5
                 }
             ]
         }
