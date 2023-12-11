@@ -335,7 +335,7 @@
               "itemId": -1
             }
           ],
-          "image": "url(/markets.png)"
+          "image": "url(/market.png)"
         },
         {
           "id": 14,
@@ -353,7 +353,7 @@
               
             }
           ],
-          "image": "url(/blacksmith.jpg)",
+          "image": "url(/blacksmith2.png)",
           "npc": {
             "name": "Alden Ironhand",
             "hasSpoken": false,
