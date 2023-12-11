@@ -332,7 +332,30 @@
               "keyID": -1
             }
           ],
-          "image": "url(/blacksmith.jpg)"
+          "image": "url(/blacksmith.jpg)",
+          "npc": {
+            "name": "Alden Ironhand",
+            "hasSpoken": false,
+            "dialogue":[
+              {
+                "speaker": "Player",
+                "speech": "Good day blacksmith. I'm on a quest and in need of a reliable weapon."
+              },
+              {
+                "speaker": "Alden Ironhand",
+                "speech": "A quest, you say? I have just the thing. This sword is balanced and sharp, forged with the finest steel. Perfect for a warrior on a quest."
+              },
+              {
+                "speaker": "Player",
+                "speech":  "It's magnificent. How much for it?"
+              },
+              {
+                "speaker": "Alden Ironhand",
+                "speech": "For someone with a cause, let's say it's a gift. May it serve you well in battle!"
+              }
+            ],
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets." 
+          }
         },
         {
           "id": 15,
@@ -347,7 +370,30 @@
               "keyID": -1
             }
           ],
-          "image": "url(/apothecary.jpg)"
+          "image": "url(/apothecary.jpg)",
+          "npc": {
+            "name": "Elara",
+            "hasSpoken": false,
+            "dialogue":[
+              {
+                "speaker": "Player",
+                "speech": "Greetings, apothecary. I am on a quest and in need of anything you may deem useful."
+              },
+              {
+                "speaker": "Elara",
+                "speech": "Is that so? Then I may have something just for you. This is a Potion of Strength. It'll temporarily increase your physical power. Use it wisely."
+              },
+              {
+                "speaker": "Player",
+                "speech":  "This could be a game changer. What do I owe you?"
+              },
+              {
+                "speaker": "Elara",
+                "speech": "Consider it a contribution to your noble cause. May it help you triumph!"
+              }
+            ],
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
+          }
         },
         {
           "id": 16,
@@ -362,7 +408,30 @@
               "keyID": -1
             }
           ],
-          "image": "url(/rivershoreDocs.jpg)"
+          "image": "url(/rivershoreDocs.jpg)",
+          "npc": {
+            "name": "Fisherman",
+            "hasSpoken": false,
+            "dialogue":[
+              {
+                "speaker": "Player",
+                "speech": "Excuse me, I heard you might know something about the Eternal Keep of Terraquor."
+              },
+              {
+                "speaker": "Fisherman",
+                "speech": "Ah, the Keep... It's not a fortress, but a sacred door, perched atop Mount Argentum. Guarded by a dark, fearsome creature."
+              },
+              {
+                "speaker": "Player",
+                "speech":  "Can you tell me how to get there?"
+              },
+              {
+                "speaker": "Fisherman",
+                "speech": "Head north out of town. Cross the Silverbridge Stream, then scale the eastern side of the mountain. The sacred door lies beyond a treacherous pass, but beware, the beast guarding it has bested many who sought the Keep's secrets."
+              }
+            ],
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
+          }
         },
         {
           "id": 17,
@@ -371,7 +440,7 @@
           "question": "",
           "choices": [
             {
-              "text": "Approach the Mount Argentum",
+              "text": "Make the journey up Mount Argentum",
               "travelDestination": 18,
               "npcID": -1,
               "keyID": -1
