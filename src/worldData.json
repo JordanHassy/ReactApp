@@ -278,14 +278,7 @@
           "title": "Rivershore Docs - Markets",
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
           "question": "What will you do in the Markets?",
-          "choices": [
-            {
-              "text": "Return to docs",
-              "travelDestination": 12,
-              "npcID": -1,
-              "keyID": -1
-            }
-          ],
+          "choices": [],
           "image": "url(/markets.jpg)",
           "npc": {
             "name": "Matilda",
@@ -333,7 +326,7 @@
         },
         {
           "id": 16,
-          "title": "Rivershore Docs (Fisherman)",
+          "title": "Rivershore Docs",
           "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
           "question": "",
           "choices": [],
