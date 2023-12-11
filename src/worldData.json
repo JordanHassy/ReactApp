@@ -102,15 +102,14 @@
           "id": 4,
           "title": "Witch's Hut - Basement",
           "description": "Finnrick explores the basement of the witch's hut. The air feels heavy with uncertainty. There are two doors in the room",
-          "question": "Do you have any questions, if not then I get to talk about what I want....",
+          "question": "",
           "choices": [
             {
-              "text": "Raise your hand and ask a question",
-              "damage": 10
-            },
-            {
-              "text": "Go back as fast as you can",
-              "travelDestination": 2
+              "text": "Go back to the Living Room",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
             },
             {
               "text": "Explore the Garden",
@@ -159,7 +158,13 @@
           "title": "Witch's Hut - Garden - Daytime",
           "description": "Finnrick leaves the witch's hut and continues on his journey.",
           "question": "",
-          "choices": [],
+          "actions": [
+            {
+              "actionType": "moveToNextRoom",
+              "roomID": 7,
+              "duration": 5
+            }
+          ],
           "image": "url(/daytimeGarden.jpg)"
         },
         {
