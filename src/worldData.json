@@ -63,13 +63,15 @@
               "text": "Go Forward",
               "travelDestination": 3,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             },
             {
               "text": "Go back",
               "travelDestination": 1,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/livingRoom.jpg)"
@@ -85,14 +87,16 @@
               "action": "pickup_wand",
               "travelDestination": 2,
               "npcID": -1,
-              "itemID": -1 
+              "itemID": -1,
+              "keyID": -1
             },
             {
               "text": "Leave it for now",
               "action": "leave_wand",
               "travelDestination": 2,
               "npcID": -1,
-              "itemID": -1 
+              "itemID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/bedroom.jpg)",
@@ -134,22 +138,26 @@
             {
               "text": "Rest and heal at the Inn",
               "travelDestination": 8,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Buy food/ailments at the Market",
               "travelDestination": 9,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Get weapons/armor at the Blacksmith",
               "travelDestination": 10,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Continue to the Tavern to meet Avis and progress",
               "travelDestination": 11,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/tavern.jpg)"
@@ -187,7 +195,8 @@
             {
               "text": "Stay the night and shop, then leave",
               "travelDestination": 14,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/avisTable.jpg)"
@@ -201,17 +210,20 @@
             {
               "text": "Go to Markets",
               "travelDestination": 13,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Go to Blacksmith",
               "travelDestination": 14,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Go to Apothecary",
               "travelDestination": 15,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/rivershoreDocs.jpg)"
