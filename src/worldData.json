@@ -3,96 +3,97 @@
         { 
           "id": 0,
           "title": "Witch's Hut",
-          "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
+          "keyId": -1,
+          "description": "You chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
           "question": "Which path will you choose?",
           "choices": [
             {
               "text": "Sleep the night off",
               "travelDestination": 1,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Explore the Hut", 
               "travelDestination": 2, 
-              "npcID": -1, 
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1, 
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/witchhut.jpg)"
+          "image": "url(/witchhut.png)"
         },
         {
           "id": 1,
           "title": "Witch's Hut - Sleep",
-          "description": "Finnrick sleeps the night off in the witch's hut.",
+          "keyId": -1,
+          "description": "You sleep the night off in the witch's hut.",
           "question": "",
           "choices": [
             {
               "text": "Explore the Living Room",
               "travelDestination": 2,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Explore the Bedroom (Locked)",
               "travelDestination": 3,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": 0
+              "npcId": -1,
+              "itemId": -1
             }
           ],
-          "image": "url(/livingroom.jpg)"
+          "image": "url(/livingroom.png)"
         },
         {
           "id": 2,
           "title": "Witch's Hut - Living Room",
-          "description": "Finnrick explores the living room of the witch's hut.",
+          "keyId": -1,
+          "description": "You explore the living room of the witch's hut.",
           "question": "",
           "choices": [
             {
-              "text": "Explore the Bedroom (Locked)",
+              "text": "Explore the Bedroom",
               "travelDestination": 3,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": 0
+              "npcId": -1,
+              "itemId": -1
             },
             {
               "text": "Explore the Basement",
               "travelDestination": 4,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             } 
           ],
-          "image": "url(/livingroom.jpg)"
+          "image": "url(/livingroom.png)"
         },
         {
           "id": 3,
           "title": "Witch's Hut - Bedroom",
-          "description": "Finnrick explores the bedroom of the witch's hut.",
+          "keyId": 0,
+          "description": "You explore the bedroom of the witch's hut.",
           "question": "You spot a finely crafted magic wand on the nightstand.",
           "choices": [
             {
               "text": "Pick up the Magic Wand",
-              "action": "pickup_wand",
-              "travelDestination": 2,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "travelDestination": -1,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": 1
+              
             },
             {
               "text": "Leave it for now",
-              "action": "leave_wand",
               "travelDestination": 2,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/bedroom.jpg)",
+          "image": "url(/bedroom.png)",
           "weapon": {
             "name": "Magic Wand",
             "description": "A finely crafted wand made of elderwood, adorned with intricate runes. It hums with latent magical energy."
@@ -101,192 +102,247 @@
         {
           "id": 4,
           "title": "Witch's Hut - Basement",
-          "description": "Finnrick explores the basement of the witch's hut. The air feels heavy with uncertainty. There are two doors in the room",
+          "keyId": -1,
+          "description": "You explore the basement of the witch's hut. The air feels heavy with uncertainty. There are two doors in the room, and a rat in the corner.",
           "question": "",
           "choices": [
             {
               "text": "Go back to the Living Room",
               "travelDestination": 2,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Explore the Garden",
               "travelDestination": 5,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
+            },
+            {
+              "text": "Say hello to the Rat",
+              "travelDestination": -1,
+              "npcId": 0,
+              "itemId": -1
+              
             },
             {
               "text": "Leave the Witch's Hut",
               "travelDestination": 6,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/basement.jpg)"
+          "image": "url(/basement.png)"
         },
         {
           "id": 5,
           "title": "Witch's Hut - Garden",
-          "description": "Finnrick explores the garden of the witch's hut.",
+          "keyId": -1,
+          "description": "You explore the garden of the witch's hut.",
           "question": "Your attention is drawn to a small weathered key nestled amidst the shadows.",
           "choices": [
             {
               "text": "Pick up the Key",
-              "action": "pickup_key",
-              "travelDestination": 4,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": 0
+              "travelDestination": -1,
+              "npcId": -1,
+              "itemId": 0
             },
             {
-              "text": "Leave it for now",
-              "action": "leave_key",
+              "text": "Go back to the Basement",
               "travelDestination": 4,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": 0
+              "npcId": -1,
+              "itemId": -1
             }
           ],
-          "image": "url(/garden.jpg)"
+          "image": "url(/garden.png)"
         },
         {
           "id": 6,
           "title": "Witch's Hut - Garden - Daytime",
-          "description": "Finnrick leaves the witch's hut and continues on his journey.",
+          "keyId": -1,
+          "description": "You leave the witch's hut and continues on your journey.",
           "question": "",
           "choices": [
             {
+              "text": "Go back inside",
+              "travelDestination": 4,
+              "npcId": -1,
+              "itemId": -1
+            },
+            {
               "text": "Travel to Thornhill",
               "travelDestination": 7,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
             }
           ],
-          "image": "url(/daytimeGarden.jpg)"
+          "image": "url(/daytimeGarden.png)"
         }, 
         {
           "id": 7,
           "title": "Thornhill",
+          "keyId": -1,
           "description": "Welcome to Thornhill",
           "question": "",
           "choices": [
             {
               "text": "Rest and heal at the Inn",
               "travelDestination": 8,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Buy food/ailments at the Market",
               "travelDestination": 9,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Purchase weapons/armor at the Blacksmith",
               "travelDestination": 10,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Continue to the Tavern to meet Avis and progress",
               "travelDestination": 11,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/thornhill.jpg)"
+          "image": "url(/thornhill.png)"
         },
         {
           "id": 8,
           "title": "Tavern - Inn",
-          "description": "Finnrick rests and heals at the Inn.",
+          "keyId": -1,
+          "description": "You rest and heal at the Inn.",
           "question": "",
-          "choices": [],
-          "image": "url(/inn.jpg)"
+          "choices": [
+            {
+              "text": "Go back",
+              "travelDestination": 7,
+              "npcId": -1,
+              "itemId": -1
+            }
+          ],
+          "image": "url(/inn.png)"
         },
         {
           "id": 9,
           "title": "Tavern - Market",
-          "description": "Finnrick buys food and ailments at the Market.",
+          "keyId": -1,
+          "description": "The market seems to be empty. It looks like no one can afford produce anymore.",
           "question": "",
-          "choices": [],
-          "image": "url(/market.jpg)"
+          "choices": [
+            {
+              "text": "Go back",
+              "travelDestination": 7,
+              "npcId": -1,
+              "itemId": -1
+            }
+          ],
+          "image": "url(/market.png)"
         },
         {
           "id": 10,
           "title": "Tavern - Blacksmith",
-          "description": "Finnrick gets weapons and armor at the Blacksmith.",
+          "keyId": -1,
+          "description": "The blacksmiths place is empty. You find a sword, laying on the ground",
           "question": "",
-          "choices": [],
-          "image": "url(/blacksmith.jpg)"
+          "choices": [
+            {
+              "text": "Go back",
+              "travelDestination": 7,
+              "npcId": -1,
+              "itemId": -1
+            },
+            {
+              "text": "Pick up sword",
+              "travelDestination": -1,
+              "npcId": -1,
+              "itemId": -1
+            }
+          ],
+          "image": "url(/blacksmith.png)"
         },
         {
           "id": 11,
           "title": "Tavern - Avis's Table",
-          "description": "When Finnrick goes to Tavern he ends up sitting at the counter while waiting for his friend and meets a man named Avis. He appears stand-offish but after small-talk and Finnick buying him a drink they begin conversation and laughing. Avis notices a dagger in Finnick's belt and realizes what he sees. Avis tells him it is not a dagger it is a key and tells him how it opens the Eternal Keep of Terraquor found on Mount Argentum. Avis insists Finnrick must go open this keep and he must leave in the morning.",
+          "keyId": -1,
+          "description": "When You go to Tavern, you ends up sitting at the counter while waiting for your friend and meet a man named Avis. He appears stand-offish but after small-talk and buying him a drink, you begin conversation and laughing. Avis notices a dagger in your belt and realizes what he sees. Avis tells you it is not a dagger it is a key and tells him how it opens the Eternal Keep of Terraquor found on Mount Argentum. Avis insists you must go open this keep and you must leave in the morning.",
           "question": "What will you do in the Tavern?",
           "choices": [
             {
               "text": "Stay the night and shop, then leave",
               "travelDestination": 12,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/avisTable.jpg)"
+          "image": "url(/avisTable.png)"
         },
         {
           "id": 12,
           "title": "Rivershore Docs",
-          "description": "Finnrick leaves Thornhill and makes his journey towards the dreary town of Rivershore.",
+          "keyId": -1,
+          "description": "You leave Thornhill and makes his journey towards the dreary town of Rivershore.",
           "question": "Where will you go in Rivershore?",
           "choices": [
             {
               "text": "Go to Markets",
               "travelDestination": 13,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Go to Blacksmith",
               "travelDestination": 14,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Go to Apothecary",
               "travelDestination": 15,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             },
             {
               "text": "Talk to the Fisherman",
               "travelDestination": 16,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
-          "image": "url(/rivershoreDocs.jpg)"
+          "image": "url(/rivershoreDocs.png)"
         },
         {
           "id": 13,
           "title": "Rivershore Docs - Markets",
-          "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
+          "keyId": -1,
+          "description": "You go to the markets. ",
           "question": "",
           "choices": [
             {
               "text": "Go to the docs",
               "travelDestination": 12,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
             }
           ],
-          "image": "url(/markets.jpg)",
+          "image": "url(/markets.png)",
           "npc": {
             "name": "Matilda",
             "hasSpoken": false,
@@ -322,14 +378,17 @@
         {
           "id": 14,
           "title": "Rivershore Docs - Blacksmith",
-          "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
+          "keyId": -1,
+          "description": "You goe to the blacksmith in Rivershore and speaks to Alden Ironhand.",
           "question": "What will you do in the Blacksmith?",
+
           "choices": [
             {
               "text": "Go to the docs",
               "travelDestination": 12,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
           "image": "url(/blacksmith.jpg)",
@@ -356,18 +415,22 @@
             ],
             "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets." 
           }
+
         },
         {
           "id": 15,
           "title": "Rivershore Docs - Apothecary",
-          "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
+          "keyId": -1,
+          "description": "You go to the apothecary in Rivershore and speaks to Elara.",
           "question": "What will you do in the Apothecary?",
+
           "choices": [
             {
               "text": "Go to the docs",
               "travelDestination": 12,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
           "image": "url(/apothecary.jpg)",
@@ -394,18 +457,22 @@
             ],
             "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
           }
+
         },
         {
           "id": 16,
           "title": "Rivershore Docs",
-          "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
+          "keyId": -1,
+          "description": "You speak to the fisherman, gain information about the Eternal Keep, and progress.",
           "question": "",
+
           "choices": [
             {
               "text": "Go to the Mountain Side Path",
               "travelDestination": 17,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
           "image": "url(/rivershoreDocs.jpg)",
@@ -432,137 +499,158 @@
             ],
             "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
           }
+
         },
         {
           "id": 17,
           "title": "Mountainside Path",
-          "description": "Finnrick approaches the mountain after setting north from Rivershore.",
+          "keyId": -1,
+          "description": "You approach the mountain after setting north from Rivershore.",
           "question": "",
+
           "choices": [
             {
               "text": "Make the journey up Mount Argentum",
               "travelDestination": 18,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
           "image": "url(/mountainsidePath.jpg)"
+
         },
         {
           "id": 18,
           "title": "Eternal Keep of Terraquor",
-          "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
+          "keyId": -1,
+          "description": "You embark on a long and treacherous journey up the mountain where you begins to approach the Eternal Keep of Terraquor.",
           "question": "",
+
           "choices": [ 
             {
               "text": "Fight Dr. Towell to the Death in order to earn the coveted Eternal Keep of Terraquor.",
               "travelDestination": 19,
-              "npcID": -1,
-              "keyID": -1
+              "npcId": -1,
+              "itemId": -1
+              
             }
           ],
           "image": "url(/eternalKeep.jpg)"
+
         },
         {
           "id": 19,
           "title": "Thanks For Playing!",
+          "keyId": -1,
           "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
           "question": "",
           "choices": [],
-          "image": "url(/finish.jpg)"
+          "image": "url(/finish.png)"
+        },
+        {
+          "id": 20,
+          "title": "Rat - Battle",
+          "keyId": -1,
+          "description": "*RAT NOISES* you translate the rat noises to mean 'You have chosen death'. Hmmm, how ominous",
+          "question": "",
+          "choices": [{
+            "text": "Kick the Rat",
+            "travelDestination": [2, 0, 0, 10, 21, 22],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          },
+          {
+            "text": "heal",
+            "travelDestination": [2, 1, 0, 10, 21, 22],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/ratbattle.png)"
+        },
+        {
+          "id": 21,
+          "title": "Rat - Battle",
+          "keyId": -1,
+          "description": "The rat bites your toes",
+          "question": "",
+          "choices": [{
+            "text": "Kick the Rat again",
+            "travelDestination": [2, 0, 0, 10, 21, 22],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          },
+          {
+            "text": "heal",
+            "travelDestination": [2, 1, 0, 10, 21, 22],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/ratbattle.png)"
+        },
+        {
+          "id": 22,
+          "title": "VICTORY",
+          "keyId": -1,
+          "description": "The rat breathes its final breath. You stand tall with pride.",
+          "question": "",
+          "choices": [{
+            "text": "Continue",
+            "travelDestination": 4,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/ratbattle.png)"
+        },
+        {
+          "id": 23,
+          "title": "Witch's Hut - Basement",
+          "keyId": -1,
+          "description": "The rat lays there lifeless. You almost feel bad for it. Almost",
+          "question": "",
+          "choices": [{
+            "text": "Ignore the Rat",
+            "travelDestination": 4,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/ratbattle.png)"
+        },
+        {
+          "id": 24,
+          "title": "YOU DIED",
+          "keyId": -1,
+          "description": "Failure is unacceptable",
+          "question": "Refresh to start over",
+          "choices": [],
+          "image": "url(/youdied.png)"
         }
       ],
     "npcs": [
         {
             "id": 0,
-            "name": "Bob",
-            "hp": 100,
+            "name": "Rat",
+            "hp": 3,
             "itemOfferedID": 0,
-            "dialogue": [
-                {
-                  "npc": [
-                    "Good day! Another fine one, isn't it?",
-                    "Ah, hello again! What brings you here today?",
-                    "Hey there! How's the day treating you?"
-                  ],
-                  "player": [
-                    "Yes, it's lovely today!",
-                    "I'm doing well, thank you.",
-                    "Not bad at all!"
-                  ]
-                },
-                {
-                  "npc": [
-                    "Lovely weather we're having today, don't you think?",
-                    "I swear, it feels like it's getting hotter by the minute!",
-                    "The rain just won't stop, will it? Makes me want to stay indoors."
-                  ],
-                  "player": [
-                    "Yes, the weather is great!",
-                    "I'm not a fan of this heat.",
-                    "I love the rain!"
-                  ]
-                },
-                {
-                  "npc": [
-                    "Did you hear about that peculiar traveler passing through town? Quite the storyteller!",
-                    "I was just reminiscing about my adventures in the mountains. Ah, the memories!",
-                    "Funny thing happened yesterday - a chicken wandered into the tavern!"
-                  ],
-                  "player": [
-                    "Really? What stories did they tell?",
-                    "Mountains sound adventurous!",
-                    "A chicken in the tavern? That's hilarious!"
-                  ]
-                },
-                {
-                  "npc": [
-                    "You know, this place always has an air of mystery. Don't you feel it?",
-                    "Have you noticed how the flowers bloom differently every week? Nature's wonders!",
-                    "The townsfolk seem a bit more cheerful today, don't they?"
-                  ],
-                  "player": [
-                    "Yes, it feels mysterious indeed.",
-                    "Nature's changes are fascinating!",
-                    "I think so too!"
-                  ]
-                },
-                {
-                  "npc": [
-                    "Say, could you do me a favor and deliver this letter to the blacksmith?",
-                    "I've got some spare herbs. Would you like some for your travels?",
-                    "If you find any shiny trinkets, I'd be happy to trade something for them!"
-                  ],
-                  "player": [
-                    "Sure, I'll deliver the letter.",
-                    "Herbs would be great, thank you!",
-                    "I'll keep an eye out for trinkets!"
-                  ]
-                }
-
-            ],
-            "attackMoves": [ 
-                {
-                  "attack": "NPC hits you with a blast of lightning",
-                  "damage": 10
-                },
-                {
-                  "attack": "NPC hits you with a blast of fire",
-                  "damage": 5
-                }
-            ]
+            "dialogue": [20, 23]
         }
     ],
     "items": [
         {
             "id": 0,
-            "name": "",
+            "name": "Bedroom Key",
             "functionality": "",
             "icon": ""
         },
         {
             "id": 1,
-            "name": "",
+            "name": "Magic Wand",
             "functionality": "",
             "icon": ""
         },
@@ -626,15 +714,15 @@
         },
         {
             "id": 1,
-            "name": "",
-            "damage": 0,
+            "name": "Magic Wand",
+            "damage": 10,
             "descrition": "",
             "icon": ""
         },
         {
             "id": 2,
-            "name": "",
-            "damage": 0,
+            "name": "Sword",
+            "damage": 15,
             "descrition": "",
             "icon": ""
         },
