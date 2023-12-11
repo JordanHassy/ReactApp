@@ -273,7 +273,34 @@
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
           "question": "What will you do in the Markets?",
           "choices": [],
-          "image": "url(/markets.jpg)"
+          "image": "url(/markets.jpg)",
+          "npc": {
+            "name": "Matilda",
+            "hasSpoken": false,
+            "dialogue": [
+              {
+                "speaker": "Matilda",
+                "speech": "Good day traveler! What brings you to Rivershore? What kind of supplies are you seeking?"
+              },
+              {
+                "speaker": "Player",
+                "speech": "Good day, I'm seeking unique items for a challenging quest."
+              },
+              {
+                "speaker": "Matilda",
+                "speech": "A quest, is it? Maybe this will help. It's just a pouch, but it's lined with aloe leaves. It can soothe burns or wounds quickly."
+              },
+              {
+                "speaker": "Player",
+                "speech": "That does seem practical. How much?"
+              },
+              {
+                "speaker": "Matilda",
+                "speech": "For a brave adventurer like yourself, it's yours for free. May it aid you on your journey!"
+              }
+            ],
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
+          }
         },
         {
           "id": 14,
