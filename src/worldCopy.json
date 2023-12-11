@@ -1,0 +1,643 @@
+{
+    "rooms": [
+        {
+          "id": 0,
+          "keyId": -1,
+          "title": "Cave",
+          "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
+          "question": "Which path will you choose?",
+          "choices": [
+            {
+              "text": "Sleep the night off",
+              "travelDestination": 1,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/athenian.jpg)"
+        },
+        {
+          "id": 1,
+          "keyId": -1,
+          "title": "Witch's Hut - Sleep",
+          "description": "Finnrick sleeps the night off in the witch's hut.",
+          "question": "",
+          "choices": [
+            {
+            "text": "Go back to the Cave",
+            "travelDestination": 0,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+            },
+            {
+              "text": "Explore the Living Room",
+              "travelDestination": 2,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/sleepingRoom.jpg)"
+        },
+        {
+          "id": 2,
+          "keyId": -1,
+          "title": "Witch's Hut - Living Room",
+          "description": "Finnrick explores the living room of the witch's hut.",
+          "question": "",
+          "choices": [
+            {
+            "text": "Go back to Wiches Hut - Sleep",
+            "travelDestination": 1,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+            },
+            {
+              "text": "Go to Bedroom",
+              "travelDestination": 3,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Go to Basement",
+              "travelDestination": 4,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Interact with npc",
+              "travelDestination": -1,
+              "npcId": 0,
+              "itemId": -1,
+              "weaponId": -1
+            }
+
+          ],
+          "image": "url(/livingRoom.jpg)"
+        },
+        {
+          "id": 3,
+          "keyId": 0,
+          "title": "Witch's Hut - Bedroom",
+          "description": "Finnrick explores the bedroom of the witch's hut.",
+          "question": "",
+          "choices": [
+            {
+              "text": "Go back to Living Room",
+              "travelDestination": 2,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Pick up magic wand",
+              "travelDestination": -1,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": 1
+            }
+          ],
+          "weapons":[1],
+          "image": "url(/bedroom.jpg)"
+        },
+        {
+          "id": 4,
+          "keyId": -1,
+          "title": "Witch's Hut - Basement",
+          "description": "Finnrick explores the basement of the witch's hut. (Chance of DEATH)",
+          "question": "",
+          "choices": [
+            {
+              "text": "Go back to Living Room",
+              "travelDestination": 2,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Go to Garden",
+              "travelDestination": 5,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Go to Cave 2",
+              "travelDestination": 6,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/basement.jpg)"
+        },
+        {
+          "id": 5,
+          "keyId": -1,
+          "title": "Witch's Hut - Garden",
+          "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
+          "question": "",
+          "choices": [
+            {
+            "text": "Go back to basement",
+            "travelDestination": 4,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+            },
+            {
+              "text": "Pick up Bedroom key",
+              "travelDestination": -1,
+              "npcId": -1,
+              "itemId": 0,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/garden.jpg)"
+        },
+        {
+          "id": 6,
+          "keyId": -1,
+          "title": "Cave - Other side",
+          "description": "Finnrick leaves the witch's hut and continues on his journey.",
+          "question": "",
+          "choices": [],
+          "image": "url(/daytimeGarden.jpg)"
+        },
+        {
+          "id": 7,
+          "keyId": -1,
+          "title": "Tavern",
+          "description": "Finnrick ends up sitting at the counter while waiting for his friend and meets a man named Avis.",
+          "question": "What will you do in the Tavern?",
+          "choices": [
+            {
+              "text": "Rest and heal at the Inn",
+              "travelDestination": 8,
+              "npcId": -1
+            },
+            {
+              "text": "Buy food/ailments at the Market",
+              "travelDestination": 9,
+              "npcId": -1
+            },
+            {
+              "text": "Get weapons/armor at the Blacksmith",
+              "travelDestination": 10,
+              "npcId": -1
+            },
+            {
+              "text": "Continue to the Tavern to meet Avis and progress",
+              "travelDestination": 11,
+              "npcId": -1
+            }
+          ],
+          "image": "url(/tavern.jpg)"
+        },
+        {
+          "id": 8,
+          "keyId": -1,
+          "title": "Tavern - Inn",
+          "description": "Finnrick rests and heals at the Inn.",
+          "question": "",
+          "choices": [],
+          "image": "url(/inn.jpg)"
+        },
+        {
+          "id": 9,
+          "keyId": -1,
+          "title": "Tavern - Market",
+          "description": "Finnrick buys food and ailments at the Market.",
+          "question": "",
+          "choices": [],
+          "image": "url(/market.jpg)"
+        },
+        {
+          "id": 10,
+          "keyId": -1,
+          "title": "Tavern - Blacksmith",
+          "description": "Finnrick gets weapons and armor at the Blacksmith.",
+          "question": "",
+          "choices": [],
+          "image": "url(/blacksmith.jpg)"
+        },
+        {
+          "id": 11,
+          "keyId": -1,
+          "title": "Tavern - Avis's Table",
+          "description": "Finnrick meets Avis and learns about the Eternal Keep. He decides to go on the journey.",
+          "question": "What will you do in the Tavern?",
+          "choices": [
+            {
+              "text": "Stay the night and shop, then leave",
+              "travelDestination": 14,
+              "npcId": -1
+            }
+          ],
+          "image": "url(/avisTable.jpg)"
+        },
+        {
+          "id": 12,
+          "keyId": -1,
+          "title": "Rivershore Docs",
+          "description": "Finnrick leaves Thornhill and makes his journey towards the dreary town of Rivershore.",
+          "question": "Where will you go in Rivershore?",
+          "choices": [
+            {
+              "text": "Go to Markets",
+              "travelDestination": 13,
+              "npcId": -1
+            },
+            {
+              "text": "Go to Blacksmith",
+              "travelDestination": 14,
+              "npcId": -1
+            },
+            {
+              "text": "Go to Apothecary",
+              "travelDestination": 15,
+              "npcId": -1
+            }
+          ],
+          "image": "url(/rivershoreDocs.jpg)"
+        },
+        {
+          "id": 13,
+          "keyId": -1,
+          "title": "Rivershore Docs - Markets",
+          "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
+          "question": "What will you do in the Markets?",
+          "choices": [],
+          "image": "url(/markets.jpg)"
+        },
+        {
+          "id": 14,
+          "keyId": -1,
+          "title": "Rivershore Docs - Blacksmith",
+          "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
+          "question": "What will you do in the Blacksmith?",
+          "choices": [],
+          "image": "url(/blacksmith.jpg)"
+        },
+        {
+          "id": 15,
+          "keyId": -1,
+          "title": "Rivershore Docs - Apothecary",
+          "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
+          "question": "What will you do in the Apothecary?",
+          "choices": [],
+          "image": "url(/apothecary.jpg)"
+        },
+        {
+          "id": 16,
+          "keyId": -1,
+          "title": "Rivershore Docs (Fisherman)",
+          "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
+          "question": "",
+          "choices": [],
+          "image": "url(/rivershoreDocs.jpg)"
+        },
+        {
+          "id": 17,
+          "keyId": -1,
+          "title": "Mountainside Path",
+          "description": "Finnrick approaches the mountain after setting north from Rivershore.",
+          "question": "",
+          "choices": [],
+          "image": "url(/mountainsidePath.jpg)"
+        },
+        {
+          "id": 18,
+          "keyId": -1,
+          "title": "Eternal Keep of Terraquor",
+          "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
+          "question": "",
+          "choices": [],
+          "image": "url(/eternalKeep.jpg)"
+        },
+        {
+          "id": 19,
+          "keyId": -1,
+          "title": "Thanks For Playing!",
+          "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
+          "question": "",
+          "choices": [],
+          "image": "url(/finish.jpg)"
+        },
+        {
+          "id": 20,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "Hello Traveler",
+          "question": "",
+          "choices": [
+            {
+              "text": "Hello NPC!",
+              "travelDestination": 21,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 21,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "Would you like an item?",
+          "question": "",
+          "choices": [
+            {
+              "text": "Yes!",
+              "travelDestination": [0, 2, 23],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "No",
+              "travelDestination": 23,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 22,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "We already spoke, silly",
+          "question": "",
+          "choices": [
+            {
+              "text": "Oh, sorry",
+              "travelDestination": 4,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 23,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "LETS BATTLE",
+          "question": "",
+          "choices": [
+            {
+              "text": "Slap the shit out of him",
+              "travelDestination": [2, 0, 0, 10, 24, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Use healing potion",
+              "travelDestination": [2, 1, 0, 10, 24, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 24,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "He twisted your arm!",
+          "question": "How will you respond?",
+          "choices": [
+            {
+              "text": "Slap the shit out of him again",
+              "travelDestination": [2, 0, 0, 20, 25, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Use healing potion",
+              "travelDestination": [2, 1, 0, 100, 25, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 25,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "He curb stomped you...",
+          "question": "",
+          "choices": [
+            {
+              "text": "Slap the shit out of him",
+              "travelDestination": [2, 0, 0, 10, 26, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            },
+            {
+              "text": "Use healing potion",
+              "travelDestination": [2, 1, 0, 10, 26, 26],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 26,
+          "keyId": -1,
+          "title": "NPC",
+          "description": "YOU WON",
+          "question": "",
+          "choices": [
+            {
+              "text": "Lets freaking go",
+              "travelDestination": 19,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/npc1.jpg)"
+        },
+        {
+          "id": 27,
+          "keyId": -1,
+          "title": "YOU DIED",
+          "description": "refresh to try again",
+          "question": "",
+          "choices": [],
+          "image": "url(/npc1.jpg)"
+        }
+
+      ],
+    "npcs": [
+        {
+            "id": 0,
+            "name": "exampleName",
+            "hp": 99,
+            "itemOfferedID": 0,
+            "dialogue": [20, 22],
+            "attackMoves": [ 
+                {
+                    "attack": "NPC hits you with a blast of lightning dealing 10 damage"
+                },
+                {
+                    "attack": "NPC hits you with a blast of fire dealing 5 damage"
+                }
+            ]
+        }
+    ],
+    "items": [
+        {
+            "id": 0,
+            "name": "Key",
+            "functionality": "Opens a door using door id",
+            "icon": ""
+        },
+        {
+            "id": 1,
+            "name": "Boogaloo",
+            "functionality": "Oogabooga",
+            "icon": ""
+        },
+        {
+            "id": 2,
+            "name": "Healing Potion",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 3,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 4,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 5,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 6,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 7,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 8,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        },
+        {
+            "id": 9,
+            "name": "",
+            "functionality": "",
+            "icon": ""
+        }
+        
+    ],
+    "weapons": [
+        {
+            "id": 0,
+            "name": "Fists",
+            "damage": 100,
+            "descrition": "The trusty old fists",
+            "icon": ""
+        },
+        {
+            "id": 1,
+            "name": "Magic Wand",
+            "damage": 10,
+            "descrition": "Channels mystical energy",
+            "icon": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 3,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 4,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 5,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 6,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 7,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 8,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        },
+        {
+            "id": 9,
+            "name": "",
+            "damage": 0,
+            "descrition": "",
+            "icon": ""
+        }
+        
+    ]
+}
