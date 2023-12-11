@@ -355,7 +355,7 @@
         },
         {
             "id": 1,
-            "name": "Knife",
+            "name": "Dagger",
             "damage": 3,
             "descrition": "A durable and versatile blade",
             "icon": ""
