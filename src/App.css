@@ -58,6 +58,34 @@
   transform: translate(-50%, -50%);
 }
 
+.inventoryBox {
+  text-align: center;
+  background-color: rgb(0, 0, 0, .8); /* Dark grey for the game container */
+  color: white;
+  padding: 60px; 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+  max-width: 1200px;
+  margin: 0;
+  margin-bottom: 100px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.weaponBox {
+  text-align: center;
+  background-color: rgb(0, 0, 0, .8); /* Dark grey for the game container */
+  color: white;
+  padding: 60px; 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+  max-width: 1200px;
+  margin: 0;
+  margin-bottom: 100px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
 
 .textBox button {
   background-color: transparent;
@@ -101,4 +129,25 @@
   right: 0;
   bottom: 0;
   position: fixed;
+}
+
+.hp-num {
+  position: absolute;
+  top: 0;
+  right:0;
+  color: rgb(112, 255, 112);
+  background-color: rgb(0, 0, 0, .5);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.enemy-hp-num {
+  position: absolute;
+  top: 0;
+  left:0;
+  color: rgb(251, 5, 5);
+  background-color: rgb(0, 0, 0, .5);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
