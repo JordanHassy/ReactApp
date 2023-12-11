@@ -65,14 +65,7 @@
               "npcID": -1,
               "itemID": -1,
               "keyID": -1
-            },
-            {
-              "text": "Explore the Garden",
-              "travelDestination": 5,
-              "npcID": -1,
-              "itemID": -1,
-              "keyID": -1
-            }
+            } 
           ],
           "image": "url(/livingRoom.jpg)"
         },
@@ -118,6 +111,20 @@
             {
               "text": "Go back as fast as you can",
               "travelDestination": 2
+            },
+            {
+              "text": "Explore the Garden",
+              "travelDestination": 5,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Leave the Witch's Hut",
+              "travelDestination": 6,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/basement.jpg)"
@@ -126,8 +133,25 @@
           "id": 5,
           "title": "Witch's Hut - Garden",
           "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
-          "question": "",
-          "choices": [],
+          "question": "Your attention is drawn to a small weathered key nestled amidst the shadows.",
+          "choices": [
+            {
+              "text": "Pick up the Key",
+              "action": "pickup_key",
+              "travelDestination": 4,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": 0
+            },
+            {
+              "text": "Leave it for now",
+              "action": "leave_key",
+              "travelDestination": 4,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": 0
+            }
+          ],
           "image": "url(/garden.jpg)"
         },
         {
