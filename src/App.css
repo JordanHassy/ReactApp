@@ -151,3 +151,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.image_class {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
