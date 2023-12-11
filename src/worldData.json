@@ -324,7 +324,14 @@
           "title": "Rivershore Docs - Blacksmith",
           "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
           "question": "What will you do in the Blacksmith?",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Go to the docs",
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/blacksmith.jpg)"
         },
         {
@@ -332,7 +339,14 @@
           "title": "Rivershore Docs - Apothecary",
           "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
           "question": "What will you do in the Apothecary?",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Go to the docs",
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/apothecary.jpg)"
         },
         {
@@ -340,7 +354,14 @@
           "title": "Rivershore Docs",
           "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
           "question": "",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Go to the Mountain Side Path",
+              "travelDestination": 17,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/rivershoreDocs.jpg)"
         },
         {
@@ -348,7 +369,14 @@
           "title": "Mountainside Path",
           "description": "Finnrick approaches the mountain after setting north from Rivershore.",
           "question": "",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Approach the Mount Argentum",
+              "travelDestination": 18,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/mountainsidePath.jpg)"
         },
         {
@@ -356,7 +384,14 @@
           "title": "Eternal Keep of Terraquor",
           "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
           "question": "",
-          "choices": [],
+          "choices": [ 
+            {
+              "text": "Fight Dr. Towell to the Death in order to earn the coveted Eternal Keep of Terraquor.",
+              "travelDestination": 19,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/eternalKeep.jpg)"
         },
         {
