@@ -10,13 +10,15 @@
               "text": "Sleep the night off",
               "travelDestination": 1,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             },
             {
               "text": "Explore the Hut", 
               "travelDestination": 2, 
               "npcID": -1, 
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/athenian.jpg)"
@@ -31,19 +33,22 @@
               "text": "Go Forward",
               "travelDestination": 2,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1, 
+              "keyID": -1
             },
             {
               "text": "Explore the Living Room",
               "travelDestination": 3,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             },
             {
-              "text": "Explore the Bedroom (It's locked)",
+              "text": "Explore the Bedroom (Locked)",
               "travelDestination": 4,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": 0
             }
           ],
           "image": "url(/sleepingRoom.jpg)"
@@ -120,8 +125,6 @@
           "choices": [],
           "image": "url(/daytimeGarden.jpg)"
         },
-
-
         {
           "id": 7,
           "title": "Tavern",
@@ -273,31 +276,69 @@
     "npcs": [
         {
             "id": 0,
-            "name": "exampleName",
+            "name": "Bob",
             "hp": 100,
             "itemOfferedID": 0,
             "dialogue": [
                 {
-                    "quote": "Hello Traveler",
-                    "responses": [
-                        {
-                            "option": "Hello NPC!"
-                        },
-                        {
-                            "option": "leave conversation"
-                        }
-                    ]
+                  "npc": [
+                    "Good day! Another fine one, isn't it?",
+                    "Ah, hello again! What brings you here today?",
+                    "Hey there! How's the day treating you?"
+                  ],
+                  "player": [
+                    "Yes, it's lovely today!",
+                    "I'm doing well, thank you.",
+                    "Not bad at all!"
+                  ]
                 },
                 {
-                    "quote": "Would you like an item?",
-                    "responses": [
-                        {
-                            "option": "Yes Please!"
-                        },
-                        {
-                            "option": "No"
-                        }
-                    ]
+                  "npc": [
+                    "Lovely weather we're having today, don't you think?",
+                    "I swear, it feels like it's getting hotter by the minute!",
+                    "The rain just won't stop, will it? Makes me want to stay indoors."
+                  ],
+                  "player": [
+                    "Yes, the weather is great!",
+                    "I'm not a fan of this heat.",
+                    "I love the rain!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "Did you hear about that peculiar traveler passing through town? Quite the storyteller!",
+                    "I was just reminiscing about my adventures in the mountains. Ah, the memories!",
+                    "Funny thing happened yesterday - a chicken wandered into the tavern!"
+                  ],
+                  "player": [
+                    "Really? What stories did they tell?",
+                    "Mountains sound adventurous!",
+                    "A chicken in the tavern? That's hilarious!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "You know, this place always has an air of mystery. Don't you feel it?",
+                    "Have you noticed how the flowers bloom differently every week? Nature's wonders!",
+                    "The townsfolk seem a bit more cheerful today, don't they?"
+                  ],
+                  "player": [
+                    "Yes, it feels mysterious indeed.",
+                    "Nature's changes are fascinating!",
+                    "I think so too!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "Say, could you do me a favor and deliver this letter to the blacksmith?",
+                    "I've got some spare herbs. Would you like some for your travels?",
+                    "If you find any shiny trinkets, I'd be happy to trade something for them!"
+                  ],
+                  "player": [
+                    "Sure, I'll deliver the letter.",
+                    "Herbs would be great, thank you!",
+                    "I'll keep an eye out for trinkets!"
+                  ]
                 }
 
             ],
