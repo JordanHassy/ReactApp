@@ -233,7 +233,7 @@
           "choices": [
             {
               "text": "Stay the night and shop, then leave",
-              "travelDestination": 14,
+              "travelDestination": 12,
               "npcID": -1,
               "keyID": -1
             }
