@@ -276,61 +276,63 @@ function App() {
   //This is a simple outline for the game, with an example image. This image can, of course, be modified by a js file,
   //or dynamically rendered to some kind of state data.
   return (
-    <div className="App" style={image}>
-      {/* The code for this TextBox element is contained in the TextBox.jsx file in the src folder. 
-      The .jsx extension is the same thing as a .js extension, the logo just looks cooler, and using
-      .jsx for all components we create will make it easier to navigate between logic(.js files) and
-      components(.jsx files)*/}
-      <button onClick={() => setBoxVis(() => !boxVis)}>Hide/Show Text Box</button>
-      <div class="vertical-center">
-        {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
-      </div>
+    <div className="App" >
+      <div class="image_class" style={image}>
+        {/* The code for this TextBox element is contained in the TextBox.jsx file in the src folder. 
+        The .jsx extension is the same thing as a .js extension, the logo just looks cooler, and using
+        .jsx for all components we create will make it easier to navigate between logic(.js files) and
+        components(.jsx files)*/}
+        <button onClick={() => setBoxVis(() => !boxVis)}>Hide/Show Text Box</button>
+        <div class="vertical-center">
+          {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
+        </div>
 
-      <div class="vertical-center">
-        {inventoryVis ? <InventoryBox items={inventory}/> : null}
-      </div>
+        <div class="vertical-center">
+          {inventoryVis ? <InventoryBox items={inventory}/> : null}
+        </div>
 
-      <div class="vertical-center">
-        {weaponVis ? <WeaponBox item={weapon}/> : null}
-      </div>
+        <div class="vertical-center">
+          {weaponVis ? <WeaponBox item={weapon}/> : null}
+        </div>
 
-      <div class="inventory">
-        <button onClick={() => {
-          if(boxVis) {
-            setBoxVis(() => 0);
-          }else if(weaponVis) {
-            setWeaponVis(() => 0);
-          } else {
-            setBoxVis(() => 1);
-            setInventoryVis(() => 0);
-            return;
-          }
-          setInventoryVis(() => 1);
-        }} class="inventory-button"><img src="backpack.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
-      </div>
+        <div class="inventory">
+          <button onClick={() => {
+            if(boxVis) {
+              setBoxVis(() => 0);
+            }else if(weaponVis) {
+              setWeaponVis(() => 0);
+            } else {
+              setBoxVis(() => 1);
+              setInventoryVis(() => 0);
+              return;
+            }
+            setInventoryVis(() => 1);
+          }} class="inventory-button"><img src="backpack.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
+        </div>
 
-      <div class="weapon">
-        <button onClick={() => {
-          if(boxVis) {
-            setBoxVis(() => 0);
-          }else if(inventoryVis) {
-            setInventoryVis(() => 0);
-          } else {
-            setBoxVis(() => 1);
-            setWeaponVis(() => 0);
-            return;
-          }
+        <div class="weapon">
+          <button onClick={() => {
+            if(boxVis) {
+              setBoxVis(() => 0);
+            }else if(inventoryVis) {
+              setInventoryVis(() => 0);
+            } else {
+              setBoxVis(() => 1);
+              setWeaponVis(() => 0);
+              return;
+            }
 
-          setWeaponVis(() => 1);
-        }} class="inventory-button"><img src="sword.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
-      </div>
-      
-      <div class="hp-num">
-        <h1>HP: {hp}</h1>
-      </div>
+            setWeaponVis(() => 1);
+          }} class="inventory-button"><img src="sword.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
+        </div>
+        
+        <div class="hp-num">
+          <h1>HP: {hp}</h1>
+        </div>
 
-      <div class="enemy-hp-num">
-        {enemyVis ? <h1>ENEMY HP: {enemy_hp}</h1> : null}
+        <div class="enemy-hp-num">
+          {enemyVis ? <h1>ENEMY HP: {enemy_hp}</h1> : null}
+        </div>
       </div>
     </div>
   );

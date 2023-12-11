@@ -21,7 +21,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/witchhut.jpg)"
+          "image": "url(/witchhut.png)"
         },
         {
           "id": 1,
@@ -44,7 +44,7 @@
               "keyID": 0
             }
           ],
-          "image": "url(/livingroom.jpg)"
+          "image": "url(/livingroom.png)"
         },
         {
           "id": 2,
@@ -67,7 +67,7 @@
               "keyID": -1
             } 
           ],
-          "image": "url(/livingroom.jpg)"
+          "image": "url(/livingroom.png)"
         },
         {
           "id": 3,
@@ -92,7 +92,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/bedroom.jpg)",
+          "image": "url(/bedroom.png)",
           "weapon": {
             "name": "Magic Wand",
             "description": "A finely crafted wand made of elderwood, adorned with intricate runes. It hums with latent magical energy."
@@ -126,7 +126,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/basement.jpg)"
+          "image": "url(/basement.png)"
         },
         {
           "id": 5,
@@ -151,7 +151,7 @@
               "keyID": 0
             }
           ],
-          "image": "url(/garden.jpg)"
+          "image": "url(/garden.png)"
         },
         {
           "id": 6,
@@ -166,7 +166,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/daytimeGarden.jpg)"
+          "image": "url(/daytimeGarden.png)"
         }, 
         {
           "id": 7,
@@ -199,7 +199,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/thornhill.jpg)"
+          "image": "url(/thornhill.png)"
         },
         {
           "id": 8,
@@ -207,7 +207,7 @@
           "description": "Finnrick rests and heals at the Inn.",
           "question": "",
           "choices": [],
-          "image": "url(/inn.jpg)"
+          "image": "url(/inn.png)"
         },
         {
           "id": 9,
@@ -215,7 +215,7 @@
           "description": "Finnrick buys food and ailments at the Market.",
           "question": "",
           "choices": [],
-          "image": "url(/market.jpg)"
+          "image": "url(/market.png)"
         },
         {
           "id": 10,
@@ -223,7 +223,7 @@
           "description": "Finnrick gets weapons and armor at the Blacksmith.",
           "question": "",
           "choices": [],
-          "image": "url(/blacksmith.jpg)"
+          "image": "url(/blacksmith.png)"
         },
         {
           "id": 11,
@@ -238,7 +238,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/avisTable.jpg)"
+          "image": "url(/avisTable.png)"
         },
         {
           "id": 12,
@@ -271,7 +271,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/rivershoreDocs.jpg)"
+          "image": "url(/rivershoreDocs.png)"
         },
         {
           "id": 13,
@@ -286,7 +286,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/markets.jpg)",
+          "image": "url(/markets.png)",
           "npc": {
             "name": "Matilda",
             "hasSpoken": false,
@@ -321,7 +321,7 @@
           "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
           "question": "What will you do in the Blacksmith?",
           "choices": [],
-          "image": "url(/blacksmith.jpg)"
+          "image": "url(/blacksmith.png)"
         },
         {
           "id": 15,
@@ -329,7 +329,7 @@
           "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
           "question": "What will you do in the Apothecary?",
           "choices": [],
-          "image": "url(/apothecary.jpg)"
+          "image": "url(/apothecary.png)"
         },
         {
           "id": 16,
@@ -337,7 +337,7 @@
           "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
           "question": "",
           "choices": [],
-          "image": "url(/rivershoreDocs.jpg)"
+          "image": "url(/rivershoreDocs.png)"
         },
         {
           "id": 17,
@@ -345,7 +345,7 @@
           "description": "Finnrick approaches the mountain after setting north from Rivershore.",
           "question": "",
           "choices": [],
-          "image": "url(/mountainsidePath.jpg)"
+          "image": "url(/mountainsidePath.png)"
         },
         {
           "id": 18,
@@ -353,7 +353,7 @@
           "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
           "question": "",
           "choices": [],
-          "image": "url(/eternalKeep.jpg)"
+          "image": "url(/eternalKeep.png)"
         },
         {
           "id": 19,
@@ -361,7 +361,7 @@
           "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
           "question": "",
           "choices": [],
-          "image": "url(/finish.jpg)"
+          "image": "url(/finish.png)"
         }
       ],
     "npcs": [
