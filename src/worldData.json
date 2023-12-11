@@ -1,6 +1,6 @@
 {
     "rooms": [
-        {
+        { 
           "id": 0,
           "title": "Witch's Hut",
           "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
@@ -10,10 +10,18 @@
               "text": "Sleep the night off",
               "travelDestination": 1,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Explore the Hut", 
+              "travelDestination": 2, 
+              "npcID": -1, 
+              "itemID": -1,
+              "keyID": -1
             }
           ],
-          "image": "url(/athenian.jpg)"
+          "image": "url(/witchhut.jpg)"
         },
         {
           "id": 1,
@@ -22,28 +30,21 @@
           "question": "",
           "choices": [
             {
-              "text": "Go Forward",
+              "text": "Explore the Living Room",
               "travelDestination": 2,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": -1
             },
             {
-
-              "text": "Go back",
-              "travelDestination": 0,
-              "text": "Explore the Living Room",
+              "text": "Explore the Bedroom (Locked)",
               "travelDestination": 3,
               "npcID": -1,
-              "itemID": -1
-            },
-            {
-              "text": "Explore the Bedroom (It's locked)",
-              "travelDestination": 4,
-              "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": 0
             }
           ],
-          "image": "url(/sleepingRoom.jpg)"
+          "image": "url(/livingroom.jpg)"
         },
         {
           "id": 2,
@@ -52,43 +53,104 @@
           "question": "",
           "choices": [
             {
-              "text": "Go Forward",
+              "text": "Explore the Bedroom (Locked)",
               "travelDestination": 3,
               "npcID": -1,
-              "itemID": -1
+              "itemID": -1,
+              "keyID": 0
             },
             {
-              "text": "Go back",
-              "travelDestination": 1,
+              "text": "Explore the Basement",
+              "travelDestination": 4,
               "npcID": -1,
-              "itemID": -1
-            }
+              "itemID": -1,
+              "keyID": -1
+            } 
           ],
-          "image": "url(/livingRoom.jpg)"
+          "image": "url(/livingroom.jpg)"
         },
         {
           "id": 3,
           "title": "Witch's Hut - Bedroom",
           "description": "Finnrick explores the bedroom of the witch's hut.",
-          "question": "",
-          "choices": [],
-          "weapons":[1],
-          "image": "url(/bedroom.jpg)"
+          "question": "You spot a finely crafted magic wand on the nightstand.",
+          "choices": [
+            {
+              "text": "Pick up the Magic Wand",
+              "action": "pickup_wand",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Leave it for now",
+              "action": "leave_wand",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            }
+          ],
+          "image": "url(/bedroom.jpg)",
+          "weapon": {
+            "name": "Magic Wand",
+            "description": "A finely crafted wand made of elderwood, adorned with intricate runes. It hums with latent magical energy."
+          }
         },
         {
           "id": 4,
           "title": "Witch's Hut - Basement",
-          "description": "Finnrick explores the basement of the witch's hut. (Chance of DEATH)",
+          "description": "Finnrick explores the basement of the witch's hut. The air feels heavy with uncertainty. There are two doors in the room",
           "question": "",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Go back to the Living Room",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Explore the Garden",
+              "travelDestination": 5,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Leave the Witch's Hut",
+              "travelDestination": 6,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/basement.jpg)"
         },
         {
           "id": 5,
           "title": "Witch's Hut - Garden",
-          "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
-          "question": "",
-          "choices": [],
+          "description": "Finnrick explores the garden of the witch's hut.",
+          "question": "Your attention is drawn to a small weathered key nestled amidst the shadows.",
+          "choices": [
+            {
+              "text": "Pick up the Key",
+              "action": "pickup_key",
+              "travelDestination": 4,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": 0
+            },
+            {
+              "text": "Leave it for now",
+              "action": "leave_key",
+              "travelDestination": 4,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": 0
+            }
+          ],
           "image": "url(/garden.jpg)"
         },
         {
@@ -96,37 +158,48 @@
           "title": "Witch's Hut - Garden - Daytime",
           "description": "Finnrick leaves the witch's hut and continues on his journey.",
           "question": "",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Travel to Thornhill",
+              "travelDestination": 7,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/daytimeGarden.jpg)"
-        },
+        }, 
         {
           "id": 7,
-          "title": "Tavern",
-          "description": "Finnrick ends up sitting at the counter while waiting for his friend and meets a man named Avis.",
-          "question": "What will you do in the Tavern?",
+          "title": "Thornhill",
+          "description": "Welcome to Thornhill",
+          "question": "",
           "choices": [
             {
               "text": "Rest and heal at the Inn",
               "travelDestination": 8,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Buy food/ailments at the Market",
               "travelDestination": 9,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
-              "text": "Get weapons/armor at the Blacksmith",
+              "text": "Purchase weapons/armor at the Blacksmith",
               "travelDestination": 10,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Continue to the Tavern to meet Avis and progress",
               "travelDestination": 11,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             }
           ],
-          "image": "url(/tavern.jpg)"
+          "image": "url(/thornhill.jpg)"
         },
         {
           "id": 8,
@@ -155,13 +228,14 @@
         {
           "id": 11,
           "title": "Tavern - Avis's Table",
-          "description": "Finnrick meets Avis and learns about the Eternal Keep. He decides to go on the journey.",
+          "description": "When Finnrick goes to Tavern he ends up sitting at the counter while waiting for his friend and meets a man named Avis. He appears stand-offish but after small-talk and Finnick buying him a drink they begin conversation and laughing. Avis notices a dagger in Finnick's belt and realizes what he sees. Avis tells him it is not a dagger it is a key and tells him how it opens the Eternal Keep of Terraquor found on Mount Argentum. Avis insists Finnrick must go open this keep and he must leave in the morning.",
           "question": "What will you do in the Tavern?",
           "choices": [
             {
               "text": "Stay the night and shop, then leave",
-              "travelDestination": 14,
-              "npcID": -1
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/avisTable.jpg)"
@@ -175,17 +249,26 @@
             {
               "text": "Go to Markets",
               "travelDestination": 13,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Go to Blacksmith",
               "travelDestination": 14,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
             },
             {
               "text": "Go to Apothecary",
               "travelDestination": 15,
-              "npcID": -1
+              "npcID": -1,
+              "keyID": -1
+            },
+            {
+              "text": "Talk to the Fisherman",
+              "travelDestination": 16,
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/rivershoreDocs.jpg)"
@@ -194,9 +277,43 @@
           "id": 13,
           "title": "Rivershore Docs - Markets",
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
-          "question": "What will you do in the Markets?",
-          "choices": [],
-          "image": "url(/markets.jpg)"
+          "question": "",
+          "choices": [
+            {
+              "text": "Go to the docs",
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
+          "image": "url(/markets.jpg)",
+          "npc": {
+            "name": "Matilda",
+            "hasSpoken": false,
+            "dialogue": [
+              {
+                "speaker": "Matilda",
+                "speech": "Good day traveler! What brings you to Rivershore? What kind of supplies are you seeking?"
+              },
+              {
+                "speaker": "Player",
+                "speech": "Good day, I'm seeking unique items for a challenging quest."
+              },
+              {
+                "speaker": "Matilda",
+                "speech": "A quest, is it? Maybe this will help. It's just a pouch, but it's lined with aloe leaves. It can soothe burns or wounds quickly."
+              },
+              {
+                "speaker": "Player",
+                "speech": "That does seem practical. How much?"
+              },
+              {
+                "speaker": "Matilda",
+                "speech": "For a brave adventurer like yourself, it's yours for free. May it aid you on your journey!"
+              }
+            ],
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
+          }
         },
         {
           "id": 14,
@@ -216,7 +333,7 @@
         },
         {
           "id": 16,
-          "title": "Rivershore Docs (Fisherman)",
+          "title": "Rivershore Docs",
           "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
           "question": "",
           "choices": [],
@@ -250,40 +367,80 @@
     "npcs": [
         {
             "id": 0,
-            "name": "exampleName",
+            "name": "Bob",
             "hp": 100,
             "itemOfferedID": 0,
             "dialogue": [
                 {
-                    "quote": "Hello Traveler",
-                    "responses": [
-                        {
-                            "option": "Hello NPC!"
-                        },
-                        {
-                            "option": "leave conversation"
-                        }
-                    ]
+                  "npc": [
+                    "Good day! Another fine one, isn't it?",
+                    "Ah, hello again! What brings you here today?",
+                    "Hey there! How's the day treating you?"
+                  ],
+                  "player": [
+                    "Yes, it's lovely today!",
+                    "I'm doing well, thank you.",
+                    "Not bad at all!"
+                  ]
                 },
                 {
-                    "quote": "Would you like an item?",
-                    "responses": [
-                        {
-                            "option": "Yes Please!"
-                        },
-                        {
-                            "option": "No"
-                        }
-                    ]
+                  "npc": [
+                    "Lovely weather we're having today, don't you think?",
+                    "I swear, it feels like it's getting hotter by the minute!",
+                    "The rain just won't stop, will it? Makes me want to stay indoors."
+                  ],
+                  "player": [
+                    "Yes, the weather is great!",
+                    "I'm not a fan of this heat.",
+                    "I love the rain!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "Did you hear about that peculiar traveler passing through town? Quite the storyteller!",
+                    "I was just reminiscing about my adventures in the mountains. Ah, the memories!",
+                    "Funny thing happened yesterday - a chicken wandered into the tavern!"
+                  ],
+                  "player": [
+                    "Really? What stories did they tell?",
+                    "Mountains sound adventurous!",
+                    "A chicken in the tavern? That's hilarious!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "You know, this place always has an air of mystery. Don't you feel it?",
+                    "Have you noticed how the flowers bloom differently every week? Nature's wonders!",
+                    "The townsfolk seem a bit more cheerful today, don't they?"
+                  ],
+                  "player": [
+                    "Yes, it feels mysterious indeed.",
+                    "Nature's changes are fascinating!",
+                    "I think so too!"
+                  ]
+                },
+                {
+                  "npc": [
+                    "Say, could you do me a favor and deliver this letter to the blacksmith?",
+                    "I've got some spare herbs. Would you like some for your travels?",
+                    "If you find any shiny trinkets, I'd be happy to trade something for them!"
+                  ],
+                  "player": [
+                    "Sure, I'll deliver the letter.",
+                    "Herbs would be great, thank you!",
+                    "I'll keep an eye out for trinkets!"
+                  ]
                 }
 
             ],
             "attackMoves": [ 
                 {
-                    "attack": "NPC hits you with a blast of lightning dealing 10 damage"
+                  "attack": "NPC hits you with a blast of lightning",
+                  "damage": 10
                 },
                 {
-                    "attack": "NPC hits you with a blast of fire dealing 5 damage"
+                  "attack": "NPC hits you with a blast of fire",
+                  "damage": 5
                 }
             ]
         }
@@ -291,8 +448,8 @@
     "items": [
         {
             "id": 0,
-            "name": "Key",
-            "functionality": "Opens a door using door id",
+            "name": "",
+            "functionality": "",
             "icon": ""
         },
         {
@@ -361,9 +518,9 @@
         },
         {
             "id": 1,
-            "name": "Magic Wand",
-            "damage": 3,
-            "descrition": "Channels mystical energy",
+            "name": "",
+            "damage": 0,
+            "descrition": "",
             "icon": ""
         },
         {
