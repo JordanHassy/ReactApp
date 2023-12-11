@@ -60,15 +60,22 @@
           "question": "",
           "choices": [
             {
-              "text": "Go Forward",
+              "text": "Explore the Bedroom (Locked)",
               "travelDestination": 3,
+              "npcID": -1,
+              "itemID": -1,
+              "keyID": 0
+            },
+            {
+              "text": "Explore the Basement",
+              "travelDestination": 4,
               "npcID": -1,
               "itemID": -1,
               "keyID": -1
             },
             {
-              "text": "Go back",
-              "travelDestination": 1,
+              "text": "Explore the Garden",
+              "travelDestination": 5,
               "npcID": -1,
               "itemID": -1,
               "keyID": -1
