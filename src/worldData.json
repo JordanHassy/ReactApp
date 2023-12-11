@@ -160,9 +160,8 @@
           "question": "",
           "actions": [
             {
-              "actionType": "moveToNextRoom",
-              "roomID": 7,
-              "duration": 5
+              "actionType": "changeRoom",
+              "roomID": 7
             }
           ],
           "image": "url(/daytimeGarden.jpg)"
