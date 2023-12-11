@@ -277,8 +277,15 @@
           "id": 13,
           "title": "Rivershore Docs - Markets",
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
-          "question": "What will you do in the Markets?",
-          "choices": [],
+          "question": "",
+          "choices": [
+            {
+              "text": "Go to the docs",
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/markets.jpg)",
           "npc": {
             "name": "Matilda",
