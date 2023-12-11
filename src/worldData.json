@@ -189,7 +189,7 @@
           "question": "",
           "choices": [
             {
-              "text": "Rest and heal at the Inn",
+              "text": "Rest at the Inn",
               "travelDestination": 8,
               "npcId": -1,
               "itemId": -1
@@ -223,7 +223,7 @@
           "id": 8,
           "title": "Tavern - Inn",
           "keyId": -1,
-          "description": "You rest and heal at the Inn.",
+          "description": "You rest at the Inn.",
           "question": "",
           "choices": [
             {
@@ -268,7 +268,8 @@
               "text": "Pick up sword",
               "travelDestination": -1,
               "npcId": -1,
-              "itemId": -1
+              "itemId": -1,
+              "weaponId": 2
             }
           ],
           "image": "url(/blacksmith.png)"
@@ -281,7 +282,7 @@
           "question": "What will you do in the Tavern?",
           "choices": [
             {
-              "text": "Stay the night and shop, then leave",
+              "text": "Stay the night then leave",
               "travelDestination": 12,
               "npcId": -1,
               "itemId": -1
@@ -300,20 +301,6 @@
             {
               "text": "Go to Markets",
               "travelDestination": 13,
-              "npcId": -1,
-              "itemId": -1
-              
-            },
-            {
-              "text": "Go to Blacksmith",
-              "travelDestination": 14,
-              "npcId": -1,
-              "itemId": -1
-              
-            },
-            {
-              "text": "Go to Apothecary",
-              "travelDestination": 15,
               "npcId": -1,
               "itemId": -1
               
@@ -340,40 +327,15 @@
               "travelDestination": 12,
               "npcId": -1,
               "itemId": -1
+            },
+            {
+              "text": "Speak to Matilda",
+              "travelDestination": -1,
+              "npcId": 1,
+              "itemId": -1
             }
           ],
-          "image": "url(/markets.png)",
-          "npc": {
-            "name": "Matilda",
-            "hasSpoken": false,
-            "dialogue": [
-              {
-                "speaker": "Matilda",
-                "speech": "Good day traveler! What brings you to Rivershore? What kind of supplies are you seeking?"
-              },
-              {
-                "speaker": "Player",
-                "speech": "Good day, I'm seeking unique items for a challenging quest."
-              },
-              {
-                "speaker": "Matilda",
-                "speech": "A quest, is it? Maybe this will help. It's just a pouch, but it's lined with aloe leaves. It can soothe burns or wounds quickly."
-              },
-              {
-                "speaker": "Player",
-                "speech": "That does seem practical. How much?"
-              },
-              {
-                "speaker": "Matilda",
-                "speech": "For a brave adventurer like yourself, it's yours for free. May it aid you on your journey!"
-              }
-            ],
-            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets.",
-            "item": {
-              "name": "Aloe Pouch",
-              "description": "Soothe burns or wounds quickly."
-            }
-          }
+          "image": "url(/markets.png)"
         },
         {
           "id": 14,
@@ -529,9 +491,9 @@
 
           "choices": [ 
             {
-              "text": "Fight Dr. Towell to the Death in order to earn the coveted Eternal Keep of Terraquor.",
-              "travelDestination": 19,
-              "npcId": -1,
+              "text": "Fight the Beast",
+              "travelDestination": -1,
+              "npcId": 2,
               "itemId": -1
               
             }
@@ -630,6 +592,99 @@
           "question": "Refresh to start over",
           "choices": [],
           "image": "url(/youdied.png)"
+        },
+        {
+          "id": 25,
+          "title": "Matilda",
+          "keyId": -1,
+          "description": "You speak to Matilda, she learns about your journey and offers you a healing potion",
+          "question": "",
+          "choices": [
+            {
+              "text": "Take the potion",
+              "travelDestination": [0, 2, 13],
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/youdied.png)"
+        },
+        {
+          "id": 26,
+          "title": "Riverside Docs - Market",
+          "keyId": -1,
+          "description": "You already spoke to Matilda, silly.",
+          "question": "",
+          "choices": [
+            {
+              "text": "Recover from your delusion",
+              "travelDestination": 13,
+              "npcId": -1,
+              "itemId": -1,
+              "weaponId": -1
+            }
+          ],
+          "image": "url(/youdied.png)"
+        },
+        {
+          "id": 27,
+          "title": "FINAL BATTLE",
+          "keyId": -1,
+          "description": "The beast looms over you. Your knees buckle, but you remember all those you are fighting for.",
+          "question": "",
+          "choices": [{
+            "text": "Attack",
+            "travelDestination": [2, 0, 0, 15, 28, 29],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          },
+          {
+            "text": "heal",
+            "travelDestination": [2, 1, 0, 8, 28, 29],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/youdied.png)"
+        },
+        {
+          "id": 28,
+          "title": "FINAL BATTLE",
+          "keyId": -1,
+          "description": "The beast hits you with a club. You feel disoriented",
+          "question": "",
+          "choices": [{
+            "text": "Attack",
+            "travelDestination": [2, 0, 0, 15, 28, 29],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          },
+          {
+            "text": "heal",
+            "travelDestination": [2, 1, 0, 8, 28, 29],
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/youdied.png)"
+        },
+        {
+          "id": 27,
+          "title": "YOU WON",
+          "keyId": -1,
+          "description": "You slayed the beast. Congrats",
+          "question": "",
+          "choices": [{
+            "text": "Continue",
+            "travelDestination": 19,
+            "npcId": -1,
+            "itemId": -1,
+            "weaponId": -1
+          }],
+          "image": "url(/youdied.png)"
         }
       ],
     "npcs": [
@@ -639,7 +694,22 @@
             "hp": 3,
             "itemOfferedID": 0,
             "dialogue": [20, 23]
+        },
+        {
+            "id": 0,
+            "name": "Matilda",
+            "hp": -1,
+            "itemOfferedID": 0,
+            "dialogue": [25, 26]
+        },
+        {
+            "id": 0,
+            "name": "Beast",
+            "hp": 100,
+            "itemOfferedID": 0,
+            "dialogue": [27, 28]
         }
+
     ],
     "items": [
         {
@@ -650,13 +720,13 @@
         },
         {
             "id": 1,
-            "name": "Magic Wand",
+            "name": "",
             "functionality": "",
             "icon": ""
         },
         {
             "id": 2,
-            "name": "",
+            "name": "Healing Potion",
             "functionality": "",
             "icon": ""
         },

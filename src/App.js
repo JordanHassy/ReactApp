@@ -244,7 +244,7 @@ function App() {
         }
         alert("You are no longer using " + worldData.weapons[this.weapon].name);
         this.weapon = weaponId;
-        let weaponName = worldData.weapons[weaponId].name
+        let weaponName = worldData.weapons[this.weapon].name;
         setWeapon(() => weaponName);
       };
       this.interact = async (npcId) => {
