@@ -40,7 +40,7 @@ function App() {
   const [weaponVis, setWeaponVis] = useState(0);
   //visited uses bit manipulation to test if room is visited. if room id bit is on, it has been 
   //visited, and therefore text will not roll out in rollOutText
-  let visited = 255;
+  let visited = 1;
 
   //uses same logic as above but with NPCs.
   let spokenTo = 0;
@@ -92,10 +92,7 @@ function App() {
     setDescription();
     setOptions(() =>[]);
     setQuestion();
-    console.log(visited);
-    console.log(1 << roomID);
-    console.log(visited & (1 << roomID));
-    if((visited & (1 << roomID)) != 0) {
+    if((visited & (1 << roomID)) != 0 && roomID !== 21) {
       setDescription(() => description);
       setQuestion(() => question);
     }else {
@@ -147,7 +144,7 @@ function App() {
             this.equipWeapon(roomId[1]);
             this.travel(roomId[2]);
           }else if (roomId[0] === 2) {//if you are in a battle
-            let youDiedIndex = 27; //index of the You Died world
+            let youDiedIndex = 24; //index of the You Died world
             if(roomId[1] === 0) { // if you are attacking
               ehp -= worldData.weapons[this.weapon].damage;
               setEnemyHp(() => ehp);
@@ -162,6 +159,8 @@ function App() {
                 }
               }else { // you beat the enemy!
                 this.travel(roomId[5]);
+                await sleep(2000);
+                setEnemyVis(() => 0);
               }
             }else if (roomId[1] === 1) { // if you are using an item
               if(this.inventory.includes(2)) { //if you have a healing potion
@@ -184,7 +183,7 @@ function App() {
                 }else {this.travel(roomId[4]);}
 
               } else {//if you don't
-                setDescription(() => "You don't have a healing potion silly!");
+                setDescription(() => "You don't have any heals, silly!");
                 setOptions(() => []);
                 setQuestion(() => "");
                 await sleep(2000);
@@ -233,6 +232,7 @@ function App() {
         for(let j = 0; j < this.inventory.length; j++) {
           dynamicInventory.push(worldData.items[this.inventory[j]].name);
         }
+        alert("Item equipped");
         setInventory(() => dynamicInventory);
         // let itemName = worldData.items[itemId].name;
         // alert(itemName + " Equipped");
@@ -244,7 +244,8 @@ function App() {
         }
         alert("You are no longer using " + worldData.weapons[this.weapon].name);
         this.weapon = weaponId;
-        setWeapon(() => this.weapon);
+        let weaponName = worldData.weapons[weaponId].name
+        setWeapon(() => weaponName);
       };
       this.interact = async (npcId) => {
         if(worldData.npcs[npcId].hp > 0) {
