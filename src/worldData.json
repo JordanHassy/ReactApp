@@ -21,7 +21,7 @@
               "keyID": -1
             }
           ],
-          "image": "url(/athenian.jpg)"
+          "image": "url(/witchhut.jpg)"
         },
         {
           "id": 1,
@@ -44,7 +44,7 @@
               "keyID": 0
             }
           ],
-          "image": "url(/sleepingRoom.jpg)"
+          "image": "url(/livingroom.jpg)"
         },
         {
           "id": 2,
@@ -67,7 +67,7 @@
               "keyID": -1
             } 
           ],
-          "image": "url(/livingRoom.jpg)"
+          "image": "url(/livingroom.jpg)"
         },
         {
           "id": 3,
