@@ -1,6 +1,6 @@
 {
     "rooms": [
-        {
+        { 
           "id": 0,
           "title": "Witch's Hut",
           "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
@@ -10,6 +10,12 @@
               "text": "Sleep the night off",
               "travelDestination": 1,
               "npcID": -1,
+              "itemID": -1
+            },
+            {
+              "text": "Explore the Hut", 
+              "travelDestination": 2, 
+              "npcID": -1, 
               "itemID": -1
             }
           ],
@@ -74,7 +80,7 @@
         {
           "id": 4,
           "title": "Witch's Hut - Basement",
-          "description": "Finnrick explores the basement of the witch's hut. (Chance of DEATH)",
+          "description": "Finnrick explores the basement of the witch's hut. The air felt heavy with uncertainty",
           "question": "",
           "choices": [],
           "image": "url(/basement.jpg)"
@@ -95,6 +101,8 @@
           "choices": [],
           "image": "url(/daytimeGarden.jpg)"
         },
+
+
         {
           "id": 7,
           "title": "Tavern",
