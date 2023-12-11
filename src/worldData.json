@@ -25,7 +25,7 @@
               "itemID": -1
             },
             {
-              "text": "Explore the Bedroom (It’s locked)",
+              "text": "Explore the Bedroom (It's locked)",
               "travelDestination": 4,
               "npcID": -1,
               "itemID": -1
@@ -67,6 +67,7 @@
           "description": "Finnrick explores the bedroom of the witch's hut.",
           "question": "",
           "choices": [],
+          "weapons":[1],
           "image": "url(/bedroom.jpg)"
         },
         {
@@ -285,8 +286,8 @@
     "items": [
         {
             "id": 0,
-            "name": "",
-            "functionality": "",
+            "name": "Key",
+            "functionality": "Opens a door using door id",
             "icon": ""
         },
         {
@@ -355,9 +356,9 @@
         },
         {
             "id": 1,
-            "name": "Dagger",
+            "name": "Magic Wand",
             "damage": 3,
-            "descrition": "A durable and versatile blade",
+            "descrition": "Channels mystical energy",
             "icon": ""
         },
         {
