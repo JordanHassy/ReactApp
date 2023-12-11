@@ -73,9 +73,28 @@
           "id": 3,
           "title": "Witch's Hut - Bedroom",
           "description": "Finnrick explores the bedroom of the witch's hut.",
-          "question": "",
-          "choices": [],
-          "image": "url(/bedroom.jpg)"
+          "question": "You spot a finely crafted magic wand on the nightstand.",
+          "choices": [
+            {
+              "text": "Pick up the Magic Wand",
+              "action": "pickup_wand",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1 
+            },
+            {
+              "text": "Leave it for now",
+              "action": "leave_wand",
+              "travelDestination": 2,
+              "npcID": -1,
+              "itemID": -1 
+            }
+          ],
+          "image": "url(/bedroom.jpg)",
+          "weapon": {
+            "name": "Magic Wand",
+            "description": "A finely crafted wand made of elderwood, adorned with intricate runes. It hums with latent magical energy."
+          }
         },
         {
           "id": 4,
