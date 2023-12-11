@@ -312,7 +312,11 @@
                 "speech": "For a brave adventurer like yourself, it's yours for free. May it aid you on your journey!"
               }
             ],
-            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets."
+            "returnGreeting": "Welcome back, Finnrick! Enjoy your time at the Markets.",
+            "item": {
+              "name": "Aloe Pouch",
+              "description": "Soothe burns or wounds quickly."
+            }
           }
         },
         {
