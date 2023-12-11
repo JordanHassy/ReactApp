@@ -47,7 +47,7 @@
   background-color: rgb(0, 0, 0, .8); /* Dark grey for the game container */
   color: white;
   padding: 60px; 
-  border-radius: 10px;
+  border-radius: 200px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
   max-width: 1200px; 
   width: 90%;
@@ -61,11 +61,44 @@
 
 .textBox button {
   background-color: transparent;
-  color: white;
+  border: none;
+  color: rgb(255, 255, 255);
   padding: 5px;
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .textBox button:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 255, 38);
+}
+
+.inventory {
+  margin-bottom: 1px;
+  margin-left : 1px;
+  width: 100px;
+  height: 100px;
+  color: green;
+  position: fixed;
+  bottom: 0;
+}
+
+.inventory-button {
+  background-color: rgb(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%
+}
+
+.inventory-image {
+  width: 80%;
+  height: 80%;
+}
+
+.weapon {
+  width: 100px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  position: fixed;
 }

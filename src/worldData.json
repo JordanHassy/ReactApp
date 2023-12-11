@@ -2,7 +2,7 @@
     "rooms": [
         {
           "id": 0,
-          "name": "Witch's Hut",
+          "title": "Witch's Hut",
           "description": "Finnrick chooses to avoid the illuminated cave and continues to walk along his path. As he continues, a huge storm forces him to take shelter in a nearby abandoned witch hut.",
           "question": "Which path will you choose?",
           "choices": [
@@ -11,59 +11,55 @@
               "travelDestination": 1,
               "npcID": -1,
               "itemID": -1
-            },
+            }
+          ],
+          "image": "url(/athenian.jpg)"
+        },
+        {
+          "id": 1,
+          "title": "Witch's Hut - Sleep",
+          "description": "Finnrick sleeps the night off in the witch's hut.",
+          "question": "",
+          "choices": [
             {
-              "text": "Explore the Hut",
+              "text": "Go Forward",
               "travelDestination": 2,
               "npcID": -1,
               "itemID": -1
             },
             {
-              "text": "Explore the Living Room",
+              "text": "Go back",
+              "travelDestination": 0,
+              "npcID": -1,
+              "itemID": -1
+            }
+          ],
+          "image": "url(/sleepingRoom.jpg)"
+        },
+        {
+          "id": 2,
+          "title": "Witch's Hut - Living Room",
+          "description": "Finnrick explores the living room of the witch's hut.",
+          "question": "",
+          "choices": [
+            {
+              "text": "Go Forward",
               "travelDestination": 3,
               "npcID": -1,
               "itemID": -1
             },
             {
-              "text": "Explore the Bedroom (It’s locked)",
-              "travelDestination": 4,
-              "npcID": -1,
-              "itemID": -1
-            },
-            {
-              "text": "Explore the Basement (Chance of DEATH)",
-              "travelDestination": 5,
-              "npcID": -1,
-              "itemID": -1
-            },
-            {
-              "text": "Explore the Garden (Key available to pick up)",
-              "travelDestination": 6,
+              "text": "Go back",
+              "travelDestination": 1,
               "npcID": -1,
               "itemID": -1
             }
           ],
-          "image": "url(/witchsHut.jpg)"
-        },
-        {
-          "id": 1,
-          "name": "Witch's Hut - Sleep",
-          "description": "Finnrick sleeps the night off in the witch's hut.",
-          "question": "",
-          "choices": [],
-          "image": "url(/sleepingRoom.jpg)"
-        },
-        {
-          "id": 2,
-          "name": "Witch's Hut - Living Room",
-          "description": "Finnrick explores the living room of the witch's hut.",
-          "question": "",
-          "choices": [],
           "image": "url(/livingRoom.jpg)"
         },
         {
           "id": 3,
-          "name": "Witch's Hut - Bedroom",
+          "title": "Witch's Hut - Bedroom",
           "description": "Finnrick explores the bedroom of the witch's hut.",
           "question": "",
           "choices": [],
@@ -71,7 +67,7 @@
         },
         {
           "id": 4,
-          "name": "Witch's Hut - Basement",
+          "title": "Witch's Hut - Basement",
           "description": "Finnrick explores the basement of the witch's hut. (Chance of DEATH)",
           "question": "",
           "choices": [],
@@ -79,7 +75,7 @@
         },
         {
           "id": 5,
-          "name": "Witch's Hut - Garden",
+          "title": "Witch's Hut - Garden",
           "description": "Finnrick explores the garden of the witch's hut. (Key available to pick up)",
           "question": "",
           "choices": [],
@@ -87,7 +83,7 @@
         },
         {
           "id": 6,
-          "name": "Witch's Hut - Garden - Daytime",
+          "title": "Witch's Hut - Garden - Daytime",
           "description": "Finnrick leaves the witch's hut and continues on his journey.",
           "question": "",
           "choices": [],
@@ -95,7 +91,7 @@
         },
         {
           "id": 7,
-          "name": "Tavern",
+          "title": "Tavern",
           "description": "Finnrick ends up sitting at the counter while waiting for his friend and meets a man named Avis.",
           "question": "What will you do in the Tavern?",
           "choices": [
@@ -124,7 +120,7 @@
         },
         {
           "id": 8,
-          "name": "Tavern - Inn",
+          "title": "Tavern - Inn",
           "description": "Finnrick rests and heals at the Inn.",
           "question": "",
           "choices": [],
@@ -132,7 +128,7 @@
         },
         {
           "id": 9,
-          "name": "Tavern - Market",
+          "title": "Tavern - Market",
           "description": "Finnrick buys food and ailments at the Market.",
           "question": "",
           "choices": [],
@@ -140,7 +136,7 @@
         },
         {
           "id": 10,
-          "name": "Tavern - Blacksmith",
+          "title": "Tavern - Blacksmith",
           "description": "Finnrick gets weapons and armor at the Blacksmith.",
           "question": "",
           "choices": [],
@@ -148,7 +144,7 @@
         },
         {
           "id": 11,
-          "name": "Tavern - Avis's Table",
+          "title": "Tavern - Avis's Table",
           "description": "Finnrick meets Avis and learns about the Eternal Keep. He decides to go on the journey.",
           "question": "What will you do in the Tavern?",
           "choices": [
@@ -162,7 +158,7 @@
         },
         {
           "id": 12,
-          "name": "Rivershore Docs",
+          "title": "Rivershore Docs",
           "description": "Finnrick leaves Thornhill and makes his journey towards the dreary town of Rivershore.",
           "question": "Where will you go in Rivershore?",
           "choices": [
@@ -186,7 +182,7 @@
         },
         {
           "id": 13,
-          "name": "Rivershore Docs - Markets",
+          "title": "Rivershore Docs - Markets",
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
           "question": "What will you do in the Markets?",
           "choices": [],
@@ -194,7 +190,7 @@
         },
         {
           "id": 14,
-          "name": "Rivershore Docs - Blacksmith",
+          "title": "Rivershore Docs - Blacksmith",
           "description": "Finnrick goes to the blacksmith in Rivershore and speaks to Alden Ironhand.",
           "question": "What will you do in the Blacksmith?",
           "choices": [],
@@ -202,7 +198,7 @@
         },
         {
           "id": 15,
-          "name": "Rivershore Docs - Apothecary",
+          "title": "Rivershore Docs - Apothecary",
           "description": "Finnrick goes to the apothecary in Rivershore and speaks to Elara.",
           "question": "What will you do in the Apothecary?",
           "choices": [],
@@ -210,7 +206,7 @@
         },
         {
           "id": 16,
-          "name": "Rivershore Docs (Fisherman)",
+          "title": "Rivershore Docs (Fisherman)",
           "description": "Finnrick speaks to the fisherman, gains information about the Eternal Keep, and progresses.",
           "question": "",
           "choices": [],
@@ -218,7 +214,7 @@
         },
         {
           "id": 17,
-          "name": "Mountainside Path",
+          "title": "Mountainside Path",
           "description": "Finnrick approaches the mountain after setting north from Rivershore.",
           "question": "",
           "choices": [],
@@ -226,7 +222,7 @@
         },
         {
           "id": 18,
-          "name": "Eternal Keep of Terraquor",
+          "title": "Eternal Keep of Terraquor",
           "description": "Finnrick embarks on a long and treacherous journey up the mountain where he begins to approach the Eternal Keep of Terraquor.",
           "question": "",
           "choices": [],
@@ -234,7 +230,7 @@
         },
         {
           "id": 19,
-          "name": "Thanks For Playing!",
+          "title": "Thanks For Playing!",
           "description": "Created by:\nJordan Hasulube\nTravis Mayfield\nSaelle Hassan\nMax Williams",
           "question": "",
           "choices": [],
