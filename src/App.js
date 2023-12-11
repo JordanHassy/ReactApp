@@ -1,10 +1,18 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./App.css";
 import TextBox from "./TextBox";
 
 import worldData from './worldData.json';
 
-
+// [
+//   {option: worldData.rooms[0].choices[0].text, 
+//     action: () => {me.travel(worldData.rooms[0].choices[0].travelDestination)}},
+//   {option: worldData.rooms[0].choices[1].text, 
+//     action: () => {me.travel(worldData.rooms[0].choices[1].travelDestination)}},
+//   {option: worldData.rooms[0].choices[2].text, 
+//     action: () => {me.travel(worldData.rooms[0].choices[2].travelDestination)}},
+//   {option: worldData.rooms[0].choices[3].text, 
+//     action: () => {me.travel(worldData.rooms[0].choices[3].travelDestination)}}]
 
 function App() {
   //================================================================================================================
@@ -15,15 +23,7 @@ function App() {
   //When we want to render something, we need to use some sort of button or interactable item that uses our classes to update
   //one of these state variables.
   const [description, setDescription] = useState(worldData.rooms[0].description);
-  const [options, setOptions] = useState([
-    {option: worldData.rooms[0].choices[0].text, 
-      action: () => {me.travel(worldData.rooms[0].choices[0].travelDestination)}},
-    {option: worldData.rooms[0].choices[1].text, 
-      action: () => {me.travel(worldData.rooms[0].choices[1].travelDestination)}},
-    {option: worldData.rooms[0].choices[2].text, 
-      action: () => {me.travel(worldData.rooms[0].choices[2].travelDestination)}},
-    {option: worldData.rooms[0].choices[3].text, 
-      action: () => {me.travel(worldData.rooms[0].choices[3].travelDestination)}}]);
+  const [options, setOptions] = useState(worldData.rooms[0].choices.map(choicesMap));
   const [question, setQuestion] = useState(worldData.rooms[0].question);
   const [title, setTitle] = useState(worldData.rooms[0].title);
   const [boxVis, setBoxVis] = useState(1);
@@ -31,19 +31,30 @@ function App() {
   const [done, setDone] = useState(0);
   //visited uses bit manipulation to test if room is visited. if room id bit is on, it has been 
   //visited, and therefore text will not roll out in rollOutText
-  const [visited, setVisited] = useState(0); 
+  let visited = 1;
 
   //uses same logic as above but with NPCs.
-  const [spokenTo, setSpokenTo] = useState(0); 
+  let spokenTo = 0;
   //================================================================================================================
   //FUNCTIONS
   //================================================================================================================
   
+  function choicesMap(obj) {
+    return {
+      option: obj.text,
+      action: () => {me.travel(obj.travelDestination)}
+    };
+  }
+
   async function sleep(milliseconds) {
     return new Promise(resolve=>setTimeout(resolve, milliseconds));
   }
 
-  async function rollOutText(roomID, description, question, options) {
+  async function rollOutText(roomID) {
+    let description = worldData.rooms[roomID].description;
+    let question = worldData.rooms[roomID].question;
+    let options = worldData.rooms[roomID].choices.map(choicesMap);
+
     console.log(question);
     setDescription();
     setOptions(() =>[]);
@@ -92,12 +103,15 @@ function App() {
       //set title and description to corresponding for the world
       //only roll out that text if world is unvisited.
       //set options to map to all options for that world
-      this.travel = (cityId) => {
-        setTitle(() => worldData.worlds[cityId].title);
+      this.travel = (roomId) => {
+        setTitle(() => worldData.rooms[roomId].title);
+        setImage(() => {return {backgroundImage: worldData.rooms[roomId].image};});
 
-        let options = worldData.worlds[cityId].choices
-
-        rollOutText();
+        rollOutText(roomId);
+        visited = visited | (1 << roomId);
+      };
+      this.equipItem = (itemId) => {
+        this.inventory.push(itemId);
       }
     }
   }
@@ -122,6 +136,17 @@ function App() {
       <button onClick={() => setBoxVis(() => !boxVis)}>Hide/Show Text Box</button>
       <div class="vertical-center">
         {boxVis ? <TextBox options={options} description={description} question={question} title={title}/> : null}
+      </div>
+
+      <div class="inventory">
+        <button onClick={() => {
+          setBoxVis(() => !boxVis);
+        }} class="inventory-button"><img src="backpack.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
+      </div>
+      <div class="weapon">
+        <button onClick={() => {
+          setBoxVis(() => !boxVis);
+        }} class="inventory-button"><img src="sword.png" class="inventory-image" width={"100%"} height={"100%"}/></button>
       </div>
     </div>
   );
