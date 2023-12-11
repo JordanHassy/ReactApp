@@ -233,7 +233,7 @@
               "itemId": -1
             }
           ],
-          "image": "url(/inn.png)"
+          "image": "url(/thornhill.png)"
         },
         {
           "id": 9,
@@ -395,7 +395,7 @@
               
             }
           ],
-          "image": "url(/apothecary.jpg)",
+          "image": "url(/apothecary.png)",
           "npc": {
             "name": "Elara",
             "hasSpoken": false,
@@ -437,7 +437,7 @@
               
             }
           ],
-          "image": "url(/rivershoreDocs.jpg)",
+          "image": "url(/rivershoreDocs.png)",
           "npc": {
             "name": "Fisherman",
             "hasSpoken": false,
@@ -479,7 +479,7 @@
               
             }
           ],
-          "image": "url(/mountainsidePath.jpg)"
+          "image": "url(/mountainsidePath.png)"
 
         },
         {
@@ -498,7 +498,7 @@
               
             }
           ],
-          "image": "url(/eternalKeep.jpg)"
+          "image": "url(/eternalKeep.png)"
 
         },
         {
@@ -530,7 +530,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 21,
@@ -552,7 +552,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 22,
@@ -567,7 +567,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 23,
@@ -582,7 +582,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 24,
