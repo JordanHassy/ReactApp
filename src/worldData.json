@@ -568,7 +568,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 21,
@@ -590,7 +590,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 22,
@@ -605,7 +605,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 23,
@@ -620,7 +620,7 @@
             "itemId": -1,
             "weaponId": -1
           }],
-          "image": "url(/ratbattle.png)"
+          "image": "url(/monster.png)"
         },
         {
           "id": 24,
