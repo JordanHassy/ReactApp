@@ -263,6 +263,12 @@
               "travelDestination": 15,
               "npcID": -1,
               "keyID": -1
+            },
+            {
+              "text": "Talk to the Fisherman",
+              "travelDestination": 16,
+              "npcID": -1,
+              "keyID": -1
             }
           ],
           "image": "url(/rivershoreDocs.jpg)"
@@ -272,7 +278,14 @@
           "title": "Rivershore Docs - Markets",
           "description": "Finnrick goes to the markets in Rivershore and speaks to Matilda.",
           "question": "What will you do in the Markets?",
-          "choices": [],
+          "choices": [
+            {
+              "text": "Return to docs",
+              "travelDestination": 12,
+              "npcID": -1,
+              "keyID": -1
+            }
+          ],
           "image": "url(/markets.jpg)",
           "npc": {
             "name": "Matilda",
