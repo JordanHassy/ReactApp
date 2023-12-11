@@ -158,13 +158,13 @@
           "title": "Witch's Hut - Garden - Daytime",
           "description": "Finnrick leaves the witch's hut and continues on his journey.",
           "question": "",
-          "actions": [
+          "image": "url(/daytimeGarden.jpg)",
+          "actions": [ 
             {
-              "actionType": "changeRoom",
-              "roomID": 7
+              "actionType": "moveToRoom",
+              "targetRoomID": 7
             }
-          ],
-          "image": "url(/daytimeGarden.jpg)"
+          ]
         },
         {
           "id": 7,
