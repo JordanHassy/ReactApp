@@ -40,7 +40,7 @@ function App() {
   const [weaponVis, setWeaponVis] = useState(0);
   //visited uses bit manipulation to test if room is visited. if room id bit is on, it has been 
   //visited, and therefore text will not roll out in rollOutText
-  let visited = 0xffff;
+  let visited = 1;
 
   //uses same logic as above but with NPCs.
   let spokenTo = 0;
